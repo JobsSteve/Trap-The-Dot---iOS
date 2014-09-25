@@ -1,0 +1,13 @@
+# Xcode
+.DS_Store
+*/build/
+*.pbxuser
+xcuserdata
+artifacts/
+
+## generic files to ignore
+*~
+*.DS_Store
+*.swp
+*.out
+
