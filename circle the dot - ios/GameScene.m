@@ -9,17 +9,20 @@
 #import "GameScene.h"
 #import "ReeCTDBoard.h"
 #import "ReeCTDNode.h"
+#import "ReeShareButtonNode.h"
 
 
 @implementation GameScene {
     ReeCTDBoard *board;
     SKLabelNode *myLabel;
     SKLabelNode *gameResultLabel;
-    SKLabelNode *shareLabel;
+    ReeShareButtonNode *shareLabel;
     SKLabelNode *reviewLabel;
+    SKView * skView;
 }
 
 -(void)didMoveToView:(SKView *)view {
+    skView = view;
     /* Setup your scene here */
     myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     
@@ -34,10 +37,15 @@
     board = [ReeCTDBoard spriteNodeWithColor:[UIColor colorWithWhite:0 alpha:0] size:CGSizeMake(420, 360)];
     [board renderGame];
     board.anchorPoint = CGPointMake(0, 0);
+    //board.zPosition = 100.00;
+    board.userInteractionEnabled = YES;
 
-    shareLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    shareLabel = [ReeShareButtonNode labelNodeWithFontNamed:@"Chalkduster"];
     shareLabel.text = @"Share";
     shareLabel.fontSize = 40;
+    //shareLabel.zPosition = 10;
+    [shareLabel addButtonToView:view];
+    shareLabel.userInteractionEnabled = YES;
     
     reviewLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     reviewLabel.text = @"Review";
@@ -58,6 +66,7 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
     for (UITouch *touch in touches) {
         CGPoint posToBoard = [touch locationInNode:board];
         if (posToBoard.x > 0 && posToBoard.x < CGRectGetWidth(board.frame) &&
@@ -81,6 +90,9 @@
 
 -(void)lose {
     gameResultLabel.text = @"LOSE";
+}
+
+- (void)setShareContainer: (UIViewController *)vc {
 }
 
 -(void)removeResultLabel {

@@ -31,7 +31,6 @@ const int defaultDotNumber = 1;
 
 - (void)setSize: (CGSize)p_size {
     super.size = p_size;
-    
     double boardWidth = CGRectGetWidth(self.frame);
     double boardHeight = CGRectGetHeight(self.frame);
     nodeSize.width = boardWidth / (y_length + 0.5);
@@ -138,6 +137,10 @@ const int defaultDotNumber = 1;
     point.x = nodeSize.width * (y +  (x % 2) / 2.0 );
     point.y = nodeSize.height * x;
     return point;
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"here!!");
 }
 
 -(ReeCTDDotPosition)getIndexByPosition: (CGPoint)pos {
