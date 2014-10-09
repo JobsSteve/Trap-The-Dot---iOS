@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5332B4BB19D5124500EBF4D9 /* ReeTTDConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5332B4BA19D5124500EBF4D9 /* ReeTTDConfiguration.m */; };
+		5332B4BD19D5181C00EBF4D9 /* ReeTTDConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5332B4BC19D5181C00EBF4D9 /* ReeTTDConfiguration.plist */; };
+		5332B4C719D6ABE200EBF4D9 /* ReeTTDResultBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5332B4C619D6ABE200EBF4D9 /* ReeTTDResultBoard.m */; };
+		5332B4CA19D6AF3B00EBF4D9 /* ReeTTDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5332B4C919D6AF3B00EBF4D9 /* ReeTTDButton.m */; };
+		5332B4D119D7C9C900EBF4D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5332B4D319D7C9C900EBF4D9 /* Localizable.strings */; };
+		5344A68319D3D12A00DDCF2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5344A68219D3D12A00DDCF2A /* Default-568h@2x.png */; };
+		5349324A19E3EAD80092F6D2 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5349324919E3EAD80092F6D2 /* sound.mp3 */; };
+		5349324D19E433FE0092F6D2 /* ReeSwitchIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5349324C19E433FE0092F6D2 /* ReeSwitchIcon.m */; };
+		5349325019E449180092F6D2 /* ReeTTDUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5349324F19E449180092F6D2 /* ReeTTDUserData.m */; };
+		5376A2AA19CFFF3D00799D74 /* ReeTTDBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5376A2A919CFFF3D00799D74 /* ReeTTDBoard.m */; };
+		5376A2AD19D016BB00799D74 /* ReeTTDNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5376A2AC19D016BB00799D74 /* ReeTTDNode.m */; };
+		5379C27E19D29831007F0407 /* ReeQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5379C27D19D29831007F0407 /* ReeQueue.m */; };
+		53BE146419D9766E00BD0C09 /* ReeTTDNavPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BE146319D9766E00BD0C09 /* ReeTTDNavPage.m */; };
+		53C35E6119DA8CF200849BE7 /* ReeTTDLevelsBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C35E6019DA8CF200849BE7 /* ReeTTDLevelsBoard.m */; };
+		53C35E6419DA8D1C00849BE7 /* ReeTTDLevelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C35E6319DA8D1C00849BE7 /* ReeTTDLevelNode.m */; };
+		840C5D7F19CA8E5D009719D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D7E19CA8E5D009719D6 /* main.m */; };
+		840C5D8219CA8E5D009719D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D8119CA8E5D009719D6 /* AppDelegate.m */; };
+		840C5D8519CA8E5D009719D6 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D8419CA8E5D009719D6 /* GameScene.m */; };
+		840C5D8719CA8E5D009719D6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D8619CA8E5D009719D6 /* GameScene.sks */; };
+		840C5D8A19CA8E5D009719D6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D8919CA8E5D009719D6 /* GameViewController.m */; };
+		840C5D8D19CA8E5D009719D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D8B19CA8E5D009719D6 /* Main.storyboard */; };
+		840C5D8F19CA8E5D009719D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D8E19CA8E5D009719D6 /* Images.xcassets */; };
+		840C5D9219CA8E5D009719D6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D9019CA8E5D009719D6 /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		840C5D9819CA8E5D009719D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840C5D7119CA8E5D009719D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 840C5D7819CA8E5D009719D6;
+			remoteInfo = "circle the dot - ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5332B4B919D5124500EBF4D9 /* ReeTTDConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDConfiguration.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5332B4BA19D5124500EBF4D9 /* ReeTTDConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReeTTDConfiguration.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5332B4BC19D5181C00EBF4D9 /* ReeTTDConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReeTTDConfiguration.plist; sourceTree = "<group>"; };
+		5332B4C519D6ABE200EBF4D9 /* ReeTTDResultBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDResultBoard.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5332B4C619D6ABE200EBF4D9 /* ReeTTDResultBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReeTTDResultBoard.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5332B4C819D6AF3B00EBF4D9 /* ReeTTDButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDButton.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5332B4C919D6AF3B00EBF4D9 /* ReeTTDButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReeTTDButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5332B4D219D7C9C900EBF4D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5332B4D419D7C9F100EBF4D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5344A68219D3D12A00DDCF2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5349324919E3EAD80092F6D2 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = assets/sound.mp3; sourceTree = "<group>"; };
+		5349324B19E433FE0092F6D2 /* ReeSwitchIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeSwitchIcon.h; sourceTree = "<group>"; };
+		5349324C19E433FE0092F6D2 /* ReeSwitchIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeSwitchIcon.m; sourceTree = "<group>"; };
+		5349324E19E449180092F6D2 /* ReeTTDUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDUserData.h; sourceTree = "<group>"; };
+		5349324F19E449180092F6D2 /* ReeTTDUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDUserData.m; sourceTree = "<group>"; };
+		5349325219E539610092F6D2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		5376A2A819CFFF3D00799D74 /* ReeTTDBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDBoard.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5376A2A919CFFF3D00799D74 /* ReeTTDBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReeTTDBoard.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5376A2AB19D016BB00799D74 /* ReeTTDNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDNode.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5376A2AC19D016BB00799D74 /* ReeTTDNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReeTTDNode.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5379C27C19D29831007F0407 /* ReeQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeQueue.h; sourceTree = "<group>"; };
+		5379C27D19D29831007F0407 /* ReeQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeQueue.m; sourceTree = "<group>"; };
+		53BE146119D95E5B00BD0C09 /* ReeTTDTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDTypes.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		53BE146219D9766E00BD0C09 /* ReeTTDNavPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDNavPage.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		53BE146319D9766E00BD0C09 /* ReeTTDNavPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReeTTDNavPage.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		53C35E5F19DA8CF200849BE7 /* ReeTTDLevelsBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDLevelsBoard.h; sourceTree = "<group>"; };
+		53C35E6019DA8CF200849BE7 /* ReeTTDLevelsBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDLevelsBoard.m; sourceTree = "<group>"; };
+		53C35E6219DA8D1C00849BE7 /* ReeTTDLevelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDLevelNode.h; sourceTree = "<group>"; };
+		53C35E6319DA8D1C00849BE7 /* ReeTTDLevelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDLevelNode.m; sourceTree = "<group>"; };
+		840C5D7919CA8E5D009719D6 /* Trap The Dot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trap The Dot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840C5D7D19CA8E5D009719D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840C5D7E19CA8E5D009719D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		840C5D8019CA8E5D009719D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		840C5D8119CA8E5D009719D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		840C5D8319CA8E5D009719D6 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GameScene.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		840C5D8419CA8E5D009719D6 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GameScene.m; sourceTree = "<group>"; usesTabs = 1; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		840C5D8619CA8E5D009719D6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		840C5D8819CA8E5D009719D6 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		840C5D8919CA8E5D009719D6 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		840C5D8C19CA8E5D009719D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		840C5D8E19CA8E5D009719D6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		840C5D9119CA8E5D009719D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		840C5D9719CA8E5D009719D6 /* Trap The DotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trap The DotTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840C5D9C19CA8E5D009719D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840C5D9D19CA8E5D009719D6 /* circle_the_dot___iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "circle_the_dot___iosTests.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		840C5D7619CA8E5D009719D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840C5D9419CA8E5D009719D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5332B4C019D51F5E00EBF4D9 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				840C5D8019CA8E5D009719D6 /* AppDelegate.h */,
+				840C5D8119CA8E5D009719D6 /* AppDelegate.m */,
+				840C5D8319CA8E5D009719D6 /* GameScene.h */,
+				840C5D8419CA8E5D009719D6 /* GameScene.m */,
+				840C5D8619CA8E5D009719D6 /* GameScene.sks */,
+				840C5D8819CA8E5D009719D6 /* GameViewController.h */,
+				840C5D8919CA8E5D009719D6 /* GameViewController.m */,
+				5379C27C19D29831007F0407 /* ReeQueue.h */,
+				5379C27D19D29831007F0407 /* ReeQueue.m */,
+				5376A2A819CFFF3D00799D74 /* ReeTTDBoard.h */,
+				5376A2A919CFFF3D00799D74 /* ReeTTDBoard.m */,
+				5332B4C819D6AF3B00EBF4D9 /* ReeTTDButton.h */,
+				5332B4C919D6AF3B00EBF4D9 /* ReeTTDButton.m */,
+				5332B4B919D5124500EBF4D9 /* ReeTTDConfiguration.h */,
+				5332B4BA19D5124500EBF4D9 /* ReeTTDConfiguration.m */,
+				53C35E6219DA8D1C00849BE7 /* ReeTTDLevelNode.h */,
+				53C35E6319DA8D1C00849BE7 /* ReeTTDLevelNode.m */,
+				53C35E5F19DA8CF200849BE7 /* ReeTTDLevelsBoard.h */,
+				53C35E6019DA8CF200849BE7 /* ReeTTDLevelsBoard.m */,
+				53BE146219D9766E00BD0C09 /* ReeTTDNavPage.h */,
+				53BE146319D9766E00BD0C09 /* ReeTTDNavPage.m */,
+				5376A2AB19D016BB00799D74 /* ReeTTDNode.h */,
+				5376A2AC19D016BB00799D74 /* ReeTTDNode.m */,
+				5332B4C519D6ABE200EBF4D9 /* ReeTTDResultBoard.h */,
+				5332B4C619D6ABE200EBF4D9 /* ReeTTDResultBoard.m */,
+				53BE146119D95E5B00BD0C09 /* ReeTTDTypes.h */,
+				5349324B19E433FE0092F6D2 /* ReeSwitchIcon.h */,
+				5349324C19E433FE0092F6D2 /* ReeSwitchIcon.m */,
+				5349324E19E449180092F6D2 /* ReeTTDUserData.h */,
+				5349324F19E449180092F6D2 /* ReeTTDUserData.m */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		5349323519E3EAB00092F6D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5349324919E3EAD80092F6D2 /* sound.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		840C5D7019CA8E5D009719D6 = {
+			isa = PBXGroup;
+			children = (
+				5344A68219D3D12A00DDCF2A /* Default-568h@2x.png */,
+				840C5D7B19CA8E5D009719D6 /* circle the dot - ios */,
+				840C5D9A19CA8E5D009719D6 /* circle the dot - iosTests */,
+				840C5D7A19CA8E5D009719D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		840C5D7A19CA8E5D009719D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				840C5D7919CA8E5D009719D6 /* Trap The Dot.app */,
+				840C5D9719CA8E5D009719D6 /* Trap The DotTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		840C5D7B19CA8E5D009719D6 /* circle the dot - ios */ = {
+			isa = PBXGroup;
+			children = (
+				5349323519E3EAB00092F6D2 /* Resources */,
+				5332B4D319D7C9C900EBF4D9 /* Localizable.strings */,
+				5332B4C019D51F5E00EBF4D9 /* src */,
+				840C5D8B19CA8E5D009719D6 /* Main.storyboard */,
+				840C5D8E19CA8E5D009719D6 /* Images.xcassets */,
+				840C5D9019CA8E5D009719D6 /* LaunchScreen.xib */,
+				840C5D7C19CA8E5D009719D6 /* Supporting Files */,
+			);
+			path = "circle the dot - ios";
+			sourceTree = "<group>";
+		};
+		840C5D7C19CA8E5D009719D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5332B4BC19D5181C00EBF4D9 /* ReeTTDConfiguration.plist */,
+				840C5D7D19CA8E5D009719D6 /* Info.plist */,
+				840C5D7E19CA8E5D009719D6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		840C5D9A19CA8E5D009719D6 /* circle the dot - iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				840C5D9D19CA8E5D009719D6 /* circle_the_dot___iosTests.m */,
+				840C5D9B19CA8E5D009719D6 /* Supporting Files */,
+			);
+			path = "circle the dot - iosTests";
+			sourceTree = "<group>";
+		};
+		840C5D9B19CA8E5D009719D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				840C5D9C19CA8E5D009719D6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		840C5D7819CA8E5D009719D6 /* Trap The Dot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 840C5DA119CA8E5D009719D6 /* Build configuration list for PBXNativeTarget "Trap The Dot" */;
+			buildPhases = (
+				840C5D7519CA8E5D009719D6 /* Sources */,
+				840C5D7619CA8E5D009719D6 /* Frameworks */,
+				840C5D7719CA8E5D009719D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Trap The Dot";
+			productName = "circle the dot - ios";
+			productReference = 840C5D7919CA8E5D009719D6 /* Trap The Dot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		840C5D9619CA8E5D009719D6 /* Trap The DotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 840C5DA419CA8E5D009719D6 /* Build configuration list for PBXNativeTarget "Trap The DotTests" */;
+			buildPhases = (
+				840C5D9319CA8E5D009719D6 /* Sources */,
+				840C5D9419CA8E5D009719D6 /* Frameworks */,
+				840C5D9519CA8E5D009719D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				840C5D9919CA8E5D009719D6 /* PBXTargetDependency */,
+			);
+			name = "Trap The DotTests";
+			productName = "circle the dot - iosTests";
+			productReference = 840C5D9719CA8E5D009719D6 /* Trap The DotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		840C5D7119CA8E5D009719D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Reeonce;
+				TargetAttributes = {
+					840C5D7819CA8E5D009719D6 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = L8WRN24LQD;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
+					840C5D9619CA8E5D009719D6 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 840C5D7819CA8E5D009719D6;
+					};
+				};
+			};
+			buildConfigurationList = 840C5D7419CA8E5D009719D6 /* Build configuration list for PBXProject "Trap The Dot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 840C5D7019CA8E5D009719D6;
+			productRefGroup = 840C5D7A19CA8E5D009719D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				840C5D7819CA8E5D009719D6 /* Trap The Dot */,
+				840C5D9619CA8E5D009719D6 /* Trap The DotTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		840C5D7719CA8E5D009719D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5349324A19E3EAD80092F6D2 /* sound.mp3 in Resources */,
+				5332B4BD19D5181C00EBF4D9 /* ReeTTDConfiguration.plist in Resources */,
+				840C5D9219CA8E5D009719D6 /* LaunchScreen.xib in Resources */,
+				840C5D8F19CA8E5D009719D6 /* Images.xcassets in Resources */,
+				840C5D8719CA8E5D009719D6 /* GameScene.sks in Resources */,
+				5344A68319D3D12A00DDCF2A /* Default-568h@2x.png in Resources */,
+				5332B4D119D7C9C900EBF4D9 /* Localizable.strings in Resources */,
+				840C5D8D19CA8E5D009719D6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840C5D9519CA8E5D009719D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		840C5D7519CA8E5D009719D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5332B4C719D6ABE200EBF4D9 /* ReeTTDResultBoard.m in Sources */,
+				53C35E6119DA8CF200849BE7 /* ReeTTDLevelsBoard.m in Sources */,
+				5332B4CA19D6AF3B00EBF4D9 /* ReeTTDButton.m in Sources */,
+				5379C27E19D29831007F0407 /* ReeQueue.m in Sources */,
+				840C5D8A19CA8E5D009719D6 /* GameViewController.m in Sources */,
+				840C5D8219CA8E5D009719D6 /* AppDelegate.m in Sources */,
+				5349324D19E433FE0092F6D2 /* ReeSwitchIcon.m in Sources */,
+				5332B4BB19D5124500EBF4D9 /* ReeTTDConfiguration.m in Sources */,
+				53BE146419D9766E00BD0C09 /* ReeTTDNavPage.m in Sources */,
+				5349325019E449180092F6D2 /* ReeTTDUserData.m in Sources */,
+				53C35E6419DA8D1C00849BE7 /* ReeTTDLevelNode.m in Sources */,
+				840C5D8519CA8E5D009719D6 /* GameScene.m in Sources */,
+				840C5D7F19CA8E5D009719D6 /* main.m in Sources */,
+				5376A2AD19D016BB00799D74 /* ReeTTDNode.m in Sources */,
+				5376A2AA19CFFF3D00799D74 /* ReeTTDBoard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840C5D9319CA8E5D009719D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		840C5D9919CA8E5D009719D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 840C5D7819CA8E5D009719D6 /* Trap The Dot */;
+			targetProxy = 840C5D9819CA8E5D009719D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5332B4D319D7C9C900EBF4D9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5332B4D219D7C9C900EBF4D9 /* zh-Hans */,
+				5332B4D419D7C9F100EBF4D9 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		840C5D8B19CA8E5D009719D6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				840C5D8C19CA8E5D009719D6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		840C5D9019CA8E5D009719D6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				840C5D9119CA8E5D009719D6 /* Base */,
+				5349325219E539610092F6D2 /* zh-Hans */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		840C5D9F19CA8E5D009719D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		840C5DA019CA8E5D009719D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		840C5DA219CA8E5D009719D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ShareSDK/Connection",
+					"$(PROJECT_DIR)/ShareSDK/Core",
+					"$(PROJECT_DIR)/ShareSDK/Extend/GooglePlusSDK",
+					"$(PROJECT_DIR)/ShareSDK/Extend/Pinterest.embeddedframework",
+					"$(PROJECT_DIR)/ShareSDK/Extend/QQConnectSDK",
+					"$(PROJECT_DIR)/ShareSDK/Extend/RenRenSDK",
+					"$(PROJECT_DIR)/ShareSDK",
+					"$(PROJECT_DIR)/ShareSDK/UI",
+				);
+				INFOPLIST_FILE = "circle the dot - ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ShareSDK/Extend/SinaWeiboSDK",
+					"$(PROJECT_DIR)/ShareSDK/Extend/TencentWeiboSDK",
+					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
+					"$(PROJECT_DIR)/ShareSDK/Extend/YiXinSDK",
+				);
+				PRODUCT_NAME = "Trap The Dot";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		840C5DA319CA8E5D009719D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ShareSDK/Connection",
+					"$(PROJECT_DIR)/ShareSDK/Core",
+					"$(PROJECT_DIR)/ShareSDK/Extend/GooglePlusSDK",
+					"$(PROJECT_DIR)/ShareSDK/Extend/Pinterest.embeddedframework",
+					"$(PROJECT_DIR)/ShareSDK/Extend/QQConnectSDK",
+					"$(PROJECT_DIR)/ShareSDK/Extend/RenRenSDK",
+					"$(PROJECT_DIR)/ShareSDK",
+					"$(PROJECT_DIR)/ShareSDK/UI",
+				);
+				INFOPLIST_FILE = "circle the dot - ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ShareSDK/Extend/SinaWeiboSDK",
+					"$(PROJECT_DIR)/ShareSDK/Extend/TencentWeiboSDK",
+					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
+					"$(PROJECT_DIR)/ShareSDK/Extend/YiXinSDK",
+				);
+				PRODUCT_NAME = "Trap The Dot";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		840C5DA519CA8E5D009719D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "circle the dot - iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "Trap The DotTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/circle the dot - ios.app/circle the dot - ios";
+			};
+			name = Debug;
+		};
+		840C5DA619CA8E5D009719D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "circle the dot - iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "Trap The DotTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/circle the dot - ios.app/circle the dot - ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		840C5D7419CA8E5D009719D6 /* Build configuration list for PBXProject "Trap The Dot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				840C5D9F19CA8E5D009719D6 /* Debug */,
+				840C5DA019CA8E5D009719D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		840C5DA119CA8E5D009719D6 /* Build configuration list for PBXNativeTarget "Trap The Dot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				840C5DA219CA8E5D009719D6 /* Debug */,
+				840C5DA319CA8E5D009719D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		840C5DA419CA8E5D009719D6 /* Build configuration list for PBXNativeTarget "Trap The DotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				840C5DA519CA8E5D009719D6 /* Debug */,
+				840C5DA619CA8E5D009719D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 840C5D7119CA8E5D009719D6 /* Project object */;
+}

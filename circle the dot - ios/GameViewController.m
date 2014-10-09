@@ -47,14 +47,15 @@
     GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
-    scene.preferredInterfaceOrientationForPresentation = self.preferredInterfaceOrientationForPresentation;
+    //scene.preferredInterfaceOrientationForPresentation = self.preferredInterfaceOrientationForPresentation;
+    scene.preferredInterfaceOrientationForPresentation = UIInterfaceOrientationPortrait;
     // Present the scene.
     [skView presentScene:scene];
 }
 
 - (BOOL)shouldAutorotate
 {
-    return YES;
+    return NO;
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
