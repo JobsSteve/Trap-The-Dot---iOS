@@ -7,87 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5332B4BB19D5124500EBF4D9 /* ReeTTDConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5332B4BA19D5124500EBF4D9 /* ReeTTDConfiguration.m */; };
+		532EEE8D19E7940800C21119 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE7C19E7940800C21119 /* GameScene.m */; };
+		532EEE8E19E7940800C21119 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 532EEE7D19E7940800C21119 /* GameScene.sks */; };
+		532EEE8F19E7940800C21119 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE7F19E7940800C21119 /* GameViewController.m */; };
+		532EEE9019E7940800C21119 /* ReeTTDLevelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE8119E7940800C21119 /* ReeTTDLevelNode.m */; };
+		532EEE9119E7940800C21119 /* ReeTTDLevelsBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE8319E7940800C21119 /* ReeTTDLevelsBoard.m */; };
+		532EEE9219E7940800C21119 /* ReeTTDNavPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE8519E7940800C21119 /* ReeTTDNavPage.m */; };
+		532EEE9319E7940800C21119 /* ReeTTDNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE8719E7940800C21119 /* ReeTTDNode.m */; };
+		532EEE9419E7940800C21119 /* ReeTTDResultBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE8919E7940800C21119 /* ReeTTDResultBoard.m */; };
+		532EEE9519E7940800C21119 /* ReeTTDUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE8C19E7940800C21119 /* ReeTTDUserData.m */; };
+		532EEEA019E7941B00C21119 /* ReeQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE9719E7941B00C21119 /* ReeQueue.m */; };
+		532EEEA119E7941B00C21119 /* ReeSwitchIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE9919E7941B00C21119 /* ReeSwitchIcon.m */; };
+		532EEEA219E7941B00C21119 /* ReeTTDBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE9B19E7941B00C21119 /* ReeTTDBoard.m */; };
+		532EEEA319E7941B00C21119 /* ReeTTDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE9D19E7941B00C21119 /* ReeTTDButton.m */; };
+		532EEEA419E7941B00C21119 /* ReeTTDConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEE9F19E7941B00C21119 /* ReeTTDConfiguration.m */; };
+		532EEEA719E7942A00C21119 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEEA619E7942A00C21119 /* AppDelegate.m */; };
 		5332B4BD19D5181C00EBF4D9 /* ReeTTDConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5332B4BC19D5181C00EBF4D9 /* ReeTTDConfiguration.plist */; };
-		5332B4C719D6ABE200EBF4D9 /* ReeTTDResultBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5332B4C619D6ABE200EBF4D9 /* ReeTTDResultBoard.m */; };
-		5332B4CA19D6AF3B00EBF4D9 /* ReeTTDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5332B4C919D6AF3B00EBF4D9 /* ReeTTDButton.m */; };
 		5332B4D119D7C9C900EBF4D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5332B4D319D7C9C900EBF4D9 /* Localizable.strings */; };
 		5344A68319D3D12A00DDCF2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5344A68219D3D12A00DDCF2A /* Default-568h@2x.png */; };
 		5349324A19E3EAD80092F6D2 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5349324919E3EAD80092F6D2 /* sound.mp3 */; };
-		5349324D19E433FE0092F6D2 /* ReeSwitchIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5349324C19E433FE0092F6D2 /* ReeSwitchIcon.m */; };
-		5349325019E449180092F6D2 /* ReeTTDUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5349324F19E449180092F6D2 /* ReeTTDUserData.m */; };
-		5376A2AA19CFFF3D00799D74 /* ReeTTDBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5376A2A919CFFF3D00799D74 /* ReeTTDBoard.m */; };
-		5376A2AD19D016BB00799D74 /* ReeTTDNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5376A2AC19D016BB00799D74 /* ReeTTDNode.m */; };
-		5379C27E19D29831007F0407 /* ReeQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5379C27D19D29831007F0407 /* ReeQueue.m */; };
-		53BE146419D9766E00BD0C09 /* ReeTTDNavPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BE146319D9766E00BD0C09 /* ReeTTDNavPage.m */; };
-		53C35E6119DA8CF200849BE7 /* ReeTTDLevelsBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C35E6019DA8CF200849BE7 /* ReeTTDLevelsBoard.m */; };
-		53C35E6419DA8D1C00849BE7 /* ReeTTDLevelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C35E6319DA8D1C00849BE7 /* ReeTTDLevelNode.m */; };
+		5352003C19E681A600F7B3DC /* Trap_The_Dot___iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D9D19CA8E5D009719D6 /* Trap_The_Dot___iosTests.m */; };
 		840C5D7F19CA8E5D009719D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D7E19CA8E5D009719D6 /* main.m */; };
-		840C5D8219CA8E5D009719D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D8119CA8E5D009719D6 /* AppDelegate.m */; };
-		840C5D8519CA8E5D009719D6 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D8419CA8E5D009719D6 /* GameScene.m */; };
-		840C5D8719CA8E5D009719D6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D8619CA8E5D009719D6 /* GameScene.sks */; };
-		840C5D8A19CA8E5D009719D6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D8919CA8E5D009719D6 /* GameViewController.m */; };
 		840C5D8D19CA8E5D009719D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D8B19CA8E5D009719D6 /* Main.storyboard */; };
 		840C5D8F19CA8E5D009719D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D8E19CA8E5D009719D6 /* Images.xcassets */; };
 		840C5D9219CA8E5D009719D6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D9019CA8E5D009719D6 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5352003F19E6828400F7B3DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840C5D7119CA8E5D009719D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 840C5D7819CA8E5D009719D6;
+			remoteInfo = "Trap The Dot";
+		};
 		840C5D9819CA8E5D009719D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 840C5D7119CA8E5D009719D6 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 840C5D7819CA8E5D009719D6;
-			remoteInfo = "circle the dot - ios";
+			remoteInfo = "Trap The Dot - ios";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5332B4B919D5124500EBF4D9 /* ReeTTDConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDConfiguration.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5332B4BA19D5124500EBF4D9 /* ReeTTDConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReeTTDConfiguration.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		532EEE7B19E7940800C21119 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		532EEE7C19E7940800C21119 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		532EEE7D19E7940800C21119 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		532EEE7E19E7940800C21119 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		532EEE7F19E7940800C21119 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		532EEE8019E7940800C21119 /* ReeTTDLevelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDLevelNode.h; sourceTree = "<group>"; };
+		532EEE8119E7940800C21119 /* ReeTTDLevelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDLevelNode.m; sourceTree = "<group>"; };
+		532EEE8219E7940800C21119 /* ReeTTDLevelsBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDLevelsBoard.h; sourceTree = "<group>"; };
+		532EEE8319E7940800C21119 /* ReeTTDLevelsBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDLevelsBoard.m; sourceTree = "<group>"; };
+		532EEE8419E7940800C21119 /* ReeTTDNavPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDNavPage.h; sourceTree = "<group>"; };
+		532EEE8519E7940800C21119 /* ReeTTDNavPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDNavPage.m; sourceTree = "<group>"; };
+		532EEE8619E7940800C21119 /* ReeTTDNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDNode.h; sourceTree = "<group>"; };
+		532EEE8719E7940800C21119 /* ReeTTDNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDNode.m; sourceTree = "<group>"; };
+		532EEE8819E7940800C21119 /* ReeTTDResultBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDResultBoard.h; sourceTree = "<group>"; };
+		532EEE8919E7940800C21119 /* ReeTTDResultBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDResultBoard.m; sourceTree = "<group>"; };
+		532EEE8A19E7940800C21119 /* ReeTTDTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDTypes.h; sourceTree = "<group>"; };
+		532EEE8B19E7940800C21119 /* ReeTTDUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDUserData.h; sourceTree = "<group>"; };
+		532EEE8C19E7940800C21119 /* ReeTTDUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDUserData.m; sourceTree = "<group>"; };
+		532EEE9619E7941B00C21119 /* ReeQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeQueue.h; sourceTree = "<group>"; };
+		532EEE9719E7941B00C21119 /* ReeQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeQueue.m; sourceTree = "<group>"; };
+		532EEE9819E7941B00C21119 /* ReeSwitchIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeSwitchIcon.h; sourceTree = "<group>"; };
+		532EEE9919E7941B00C21119 /* ReeSwitchIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeSwitchIcon.m; sourceTree = "<group>"; };
+		532EEE9A19E7941B00C21119 /* ReeTTDBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDBoard.h; sourceTree = "<group>"; };
+		532EEE9B19E7941B00C21119 /* ReeTTDBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDBoard.m; sourceTree = "<group>"; };
+		532EEE9C19E7941B00C21119 /* ReeTTDButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDButton.h; sourceTree = "<group>"; };
+		532EEE9D19E7941B00C21119 /* ReeTTDButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDButton.m; sourceTree = "<group>"; };
+		532EEE9E19E7941B00C21119 /* ReeTTDConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDConfiguration.h; sourceTree = "<group>"; };
+		532EEE9F19E7941B00C21119 /* ReeTTDConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDConfiguration.m; sourceTree = "<group>"; };
+		532EEEA519E7942A00C21119 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		532EEEA619E7942A00C21119 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5332B4BC19D5181C00EBF4D9 /* ReeTTDConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReeTTDConfiguration.plist; sourceTree = "<group>"; };
-		5332B4C519D6ABE200EBF4D9 /* ReeTTDResultBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDResultBoard.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5332B4C619D6ABE200EBF4D9 /* ReeTTDResultBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReeTTDResultBoard.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		5332B4C819D6AF3B00EBF4D9 /* ReeTTDButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDButton.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5332B4C919D6AF3B00EBF4D9 /* ReeTTDButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReeTTDButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5332B4D219D7C9C900EBF4D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5332B4D419D7C9F100EBF4D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5344A68219D3D12A00DDCF2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5349324919E3EAD80092F6D2 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = assets/sound.mp3; sourceTree = "<group>"; };
-		5349324B19E433FE0092F6D2 /* ReeSwitchIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeSwitchIcon.h; sourceTree = "<group>"; };
-		5349324C19E433FE0092F6D2 /* ReeSwitchIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeSwitchIcon.m; sourceTree = "<group>"; };
-		5349324E19E449180092F6D2 /* ReeTTDUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDUserData.h; sourceTree = "<group>"; };
-		5349324F19E449180092F6D2 /* ReeTTDUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDUserData.m; sourceTree = "<group>"; };
 		5349325219E539610092F6D2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		5376A2A819CFFF3D00799D74 /* ReeTTDBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDBoard.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5376A2A919CFFF3D00799D74 /* ReeTTDBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReeTTDBoard.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		5376A2AB19D016BB00799D74 /* ReeTTDNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDNode.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5376A2AC19D016BB00799D74 /* ReeTTDNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReeTTDNode.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		5379C27C19D29831007F0407 /* ReeQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeQueue.h; sourceTree = "<group>"; };
-		5379C27D19D29831007F0407 /* ReeQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeQueue.m; sourceTree = "<group>"; };
-		53BE146119D95E5B00BD0C09 /* ReeTTDTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDTypes.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		53BE146219D9766E00BD0C09 /* ReeTTDNavPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReeTTDNavPage.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		53BE146319D9766E00BD0C09 /* ReeTTDNavPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReeTTDNavPage.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		53C35E5F19DA8CF200849BE7 /* ReeTTDLevelsBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDLevelsBoard.h; sourceTree = "<group>"; };
-		53C35E6019DA8CF200849BE7 /* ReeTTDLevelsBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDLevelsBoard.m; sourceTree = "<group>"; };
-		53C35E6219DA8D1C00849BE7 /* ReeTTDLevelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReeTTDLevelNode.h; sourceTree = "<group>"; };
-		53C35E6319DA8D1C00849BE7 /* ReeTTDLevelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReeTTDLevelNode.m; sourceTree = "<group>"; };
 		840C5D7919CA8E5D009719D6 /* Trap The Dot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trap The Dot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840C5D7D19CA8E5D009719D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840C5D7E19CA8E5D009719D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		840C5D8019CA8E5D009719D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		840C5D8119CA8E5D009719D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		840C5D8319CA8E5D009719D6 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GameScene.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		840C5D8419CA8E5D009719D6 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GameScene.m; sourceTree = "<group>"; usesTabs = 1; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		840C5D8619CA8E5D009719D6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		840C5D8819CA8E5D009719D6 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		840C5D8919CA8E5D009719D6 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		840C5D8C19CA8E5D009719D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		840C5D8E19CA8E5D009719D6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		840C5D9119CA8E5D009719D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		840C5D9719CA8E5D009719D6 /* Trap The DotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trap The DotTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840C5D9C19CA8E5D009719D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		840C5D9D19CA8E5D009719D6 /* circle_the_dot___iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "circle_the_dot___iosTests.m"; sourceTree = "<group>"; };
+		840C5D9D19CA8E5D009719D6 /* Trap_The_Dot___iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Trap_The_Dot___iosTests.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,36 +119,36 @@
 		5332B4C019D51F5E00EBF4D9 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				840C5D8019CA8E5D009719D6 /* AppDelegate.h */,
-				840C5D8119CA8E5D009719D6 /* AppDelegate.m */,
-				840C5D8319CA8E5D009719D6 /* GameScene.h */,
-				840C5D8419CA8E5D009719D6 /* GameScene.m */,
-				840C5D8619CA8E5D009719D6 /* GameScene.sks */,
-				840C5D8819CA8E5D009719D6 /* GameViewController.h */,
-				840C5D8919CA8E5D009719D6 /* GameViewController.m */,
-				5379C27C19D29831007F0407 /* ReeQueue.h */,
-				5379C27D19D29831007F0407 /* ReeQueue.m */,
-				5376A2A819CFFF3D00799D74 /* ReeTTDBoard.h */,
-				5376A2A919CFFF3D00799D74 /* ReeTTDBoard.m */,
-				5332B4C819D6AF3B00EBF4D9 /* ReeTTDButton.h */,
-				5332B4C919D6AF3B00EBF4D9 /* ReeTTDButton.m */,
-				5332B4B919D5124500EBF4D9 /* ReeTTDConfiguration.h */,
-				5332B4BA19D5124500EBF4D9 /* ReeTTDConfiguration.m */,
-				53C35E6219DA8D1C00849BE7 /* ReeTTDLevelNode.h */,
-				53C35E6319DA8D1C00849BE7 /* ReeTTDLevelNode.m */,
-				53C35E5F19DA8CF200849BE7 /* ReeTTDLevelsBoard.h */,
-				53C35E6019DA8CF200849BE7 /* ReeTTDLevelsBoard.m */,
-				53BE146219D9766E00BD0C09 /* ReeTTDNavPage.h */,
-				53BE146319D9766E00BD0C09 /* ReeTTDNavPage.m */,
-				5376A2AB19D016BB00799D74 /* ReeTTDNode.h */,
-				5376A2AC19D016BB00799D74 /* ReeTTDNode.m */,
-				5332B4C519D6ABE200EBF4D9 /* ReeTTDResultBoard.h */,
-				5332B4C619D6ABE200EBF4D9 /* ReeTTDResultBoard.m */,
-				53BE146119D95E5B00BD0C09 /* ReeTTDTypes.h */,
-				5349324B19E433FE0092F6D2 /* ReeSwitchIcon.h */,
-				5349324C19E433FE0092F6D2 /* ReeSwitchIcon.m */,
-				5349324E19E449180092F6D2 /* ReeTTDUserData.h */,
-				5349324F19E449180092F6D2 /* ReeTTDUserData.m */,
+				532EEEA519E7942A00C21119 /* AppDelegate.h */,
+				532EEEA619E7942A00C21119 /* AppDelegate.m */,
+				532EEE7B19E7940800C21119 /* GameScene.h */,
+				532EEE7C19E7940800C21119 /* GameScene.m */,
+				532EEE7D19E7940800C21119 /* GameScene.sks */,
+				532EEE7E19E7940800C21119 /* GameViewController.h */,
+				532EEE7F19E7940800C21119 /* GameViewController.m */,
+				532EEE9619E7941B00C21119 /* ReeQueue.h */,
+				532EEE9719E7941B00C21119 /* ReeQueue.m */,
+				532EEE9819E7941B00C21119 /* ReeSwitchIcon.h */,
+				532EEE9919E7941B00C21119 /* ReeSwitchIcon.m */,
+				532EEE9A19E7941B00C21119 /* ReeTTDBoard.h */,
+				532EEE9B19E7941B00C21119 /* ReeTTDBoard.m */,
+				532EEE9C19E7941B00C21119 /* ReeTTDButton.h */,
+				532EEE9D19E7941B00C21119 /* ReeTTDButton.m */,
+				532EEE9E19E7941B00C21119 /* ReeTTDConfiguration.h */,
+				532EEE9F19E7941B00C21119 /* ReeTTDConfiguration.m */,
+				532EEE8019E7940800C21119 /* ReeTTDLevelNode.h */,
+				532EEE8119E7940800C21119 /* ReeTTDLevelNode.m */,
+				532EEE8219E7940800C21119 /* ReeTTDLevelsBoard.h */,
+				532EEE8319E7940800C21119 /* ReeTTDLevelsBoard.m */,
+				532EEE8419E7940800C21119 /* ReeTTDNavPage.h */,
+				532EEE8519E7940800C21119 /* ReeTTDNavPage.m */,
+				532EEE8619E7940800C21119 /* ReeTTDNode.h */,
+				532EEE8719E7940800C21119 /* ReeTTDNode.m */,
+				532EEE8819E7940800C21119 /* ReeTTDResultBoard.h */,
+				532EEE8919E7940800C21119 /* ReeTTDResultBoard.m */,
+				532EEE8A19E7940800C21119 /* ReeTTDTypes.h */,
+				532EEE8B19E7940800C21119 /* ReeTTDUserData.h */,
+				532EEE8C19E7940800C21119 /* ReeTTDUserData.m */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -157,8 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				5344A68219D3D12A00DDCF2A /* Default-568h@2x.png */,
-				840C5D7B19CA8E5D009719D6 /* circle the dot - ios */,
-				840C5D9A19CA8E5D009719D6 /* circle the dot - iosTests */,
+				840C5D7B19CA8E5D009719D6 /* trap the dot - ios */,
+				840C5D9A19CA8E5D009719D6 /* trap the dot - iosTests */,
 				840C5D7A19CA8E5D009719D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -172,7 +180,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		840C5D7B19CA8E5D009719D6 /* circle the dot - ios */ = {
+		840C5D7B19CA8E5D009719D6 /* trap the dot - ios */ = {
 			isa = PBXGroup;
 			children = (
 				5349323519E3EAB00092F6D2 /* Resources */,
@@ -183,7 +191,8 @@
 				840C5D9019CA8E5D009719D6 /* LaunchScreen.xib */,
 				840C5D7C19CA8E5D009719D6 /* Supporting Files */,
 			);
-			path = "circle the dot - ios";
+			name = "trap the dot - ios";
+			path = "Trap The Dot - ios";
 			sourceTree = "<group>";
 		};
 		840C5D7C19CA8E5D009719D6 /* Supporting Files */ = {
@@ -196,13 +205,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		840C5D9A19CA8E5D009719D6 /* circle the dot - iosTests */ = {
+		840C5D9A19CA8E5D009719D6 /* trap the dot - iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				840C5D9D19CA8E5D009719D6 /* circle_the_dot___iosTests.m */,
+				840C5D9D19CA8E5D009719D6 /* Trap_The_Dot___iosTests.m */,
 				840C5D9B19CA8E5D009719D6 /* Supporting Files */,
 			);
-			path = "circle the dot - iosTests";
+			name = "trap the dot - iosTests";
+			path = "Trap The Dot - iosTests";
 			sourceTree = "<group>";
 		};
 		840C5D9B19CA8E5D009719D6 /* Supporting Files */ = {
@@ -229,7 +239,7 @@
 			dependencies = (
 			);
 			name = "Trap The Dot";
-			productName = "circle the dot - ios";
+			productName = "trap the dot - ios";
 			productReference = 840C5D7919CA8E5D009719D6 /* Trap The Dot.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -245,9 +255,10 @@
 			);
 			dependencies = (
 				840C5D9919CA8E5D009719D6 /* PBXTargetDependency */,
+				5352004019E6828400F7B3DC /* PBXTargetDependency */,
 			);
 			name = "Trap The DotTests";
-			productName = "circle the dot - iosTests";
+			productName = "trap the dot - iosTests";
 			productReference = 840C5D9719CA8E5D009719D6 /* Trap The DotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -304,7 +315,7 @@
 				5332B4BD19D5181C00EBF4D9 /* ReeTTDConfiguration.plist in Resources */,
 				840C5D9219CA8E5D009719D6 /* LaunchScreen.xib in Resources */,
 				840C5D8F19CA8E5D009719D6 /* Images.xcassets in Resources */,
-				840C5D8719CA8E5D009719D6 /* GameScene.sks in Resources */,
+				532EEE8E19E7940800C21119 /* GameScene.sks in Resources */,
 				5344A68319D3D12A00DDCF2A /* Default-568h@2x.png in Resources */,
 				5332B4D119D7C9C900EBF4D9 /* Localizable.strings in Resources */,
 				840C5D8D19CA8E5D009719D6 /* Main.storyboard in Resources */,
@@ -325,21 +336,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5332B4C719D6ABE200EBF4D9 /* ReeTTDResultBoard.m in Sources */,
-				53C35E6119DA8CF200849BE7 /* ReeTTDLevelsBoard.m in Sources */,
-				5332B4CA19D6AF3B00EBF4D9 /* ReeTTDButton.m in Sources */,
-				5379C27E19D29831007F0407 /* ReeQueue.m in Sources */,
-				840C5D8A19CA8E5D009719D6 /* GameViewController.m in Sources */,
-				840C5D8219CA8E5D009719D6 /* AppDelegate.m in Sources */,
-				5349324D19E433FE0092F6D2 /* ReeSwitchIcon.m in Sources */,
-				5332B4BB19D5124500EBF4D9 /* ReeTTDConfiguration.m in Sources */,
-				53BE146419D9766E00BD0C09 /* ReeTTDNavPage.m in Sources */,
-				5349325019E449180092F6D2 /* ReeTTDUserData.m in Sources */,
-				53C35E6419DA8D1C00849BE7 /* ReeTTDLevelNode.m in Sources */,
-				840C5D8519CA8E5D009719D6 /* GameScene.m in Sources */,
+				532EEEA319E7941B00C21119 /* ReeTTDButton.m in Sources */,
+				532EEE8D19E7940800C21119 /* GameScene.m in Sources */,
+				532EEE8F19E7940800C21119 /* GameViewController.m in Sources */,
+				532EEE9319E7940800C21119 /* ReeTTDNode.m in Sources */,
+				532EEEA419E7941B00C21119 /* ReeTTDConfiguration.m in Sources */,
+				532EEE9219E7940800C21119 /* ReeTTDNavPage.m in Sources */,
+				532EEEA219E7941B00C21119 /* ReeTTDBoard.m in Sources */,
+				532EEEA119E7941B00C21119 /* ReeSwitchIcon.m in Sources */,
+				532EEE9019E7940800C21119 /* ReeTTDLevelNode.m in Sources */,
+				532EEE9519E7940800C21119 /* ReeTTDUserData.m in Sources */,
+				532EEE9419E7940800C21119 /* ReeTTDResultBoard.m in Sources */,
+				532EEE9119E7940800C21119 /* ReeTTDLevelsBoard.m in Sources */,
+				532EEEA019E7941B00C21119 /* ReeQueue.m in Sources */,
 				840C5D7F19CA8E5D009719D6 /* main.m in Sources */,
-				5376A2AD19D016BB00799D74 /* ReeTTDNode.m in Sources */,
-				5376A2AA19CFFF3D00799D74 /* ReeTTDBoard.m in Sources */,
+				532EEEA719E7942A00C21119 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,12 +358,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5352003C19E681A600F7B3DC /* Trap_The_Dot___iosTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5352004019E6828400F7B3DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 840C5D7819CA8E5D009719D6 /* Trap The Dot */;
+			targetProxy = 5352003F19E6828400F7B3DC /* PBXContainerItemProxy */;
+		};
 		840C5D9919CA8E5D009719D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 840C5D7819CA8E5D009719D6 /* Trap The Dot */;
@@ -486,7 +503,7 @@
 					"$(PROJECT_DIR)/ShareSDK",
 					"$(PROJECT_DIR)/ShareSDK/UI",
 				);
-				INFOPLIST_FILE = "circle the dot - ios/Info.plist";
+				INFOPLIST_FILE = "Trap The Dot - ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -518,7 +535,7 @@
 					"$(PROJECT_DIR)/ShareSDK",
 					"$(PROJECT_DIR)/ShareSDK/UI",
 				);
-				INFOPLIST_FILE = "circle the dot - ios/Info.plist";
+				INFOPLIST_FILE = "Trap The Dot - ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -545,10 +562,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "circle the dot - iosTests/Info.plist";
+				INFOPLIST_FILE = "Trap The Dot - iosTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "Trap The DotTests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/circle the dot - ios.app/circle the dot - ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trap The Dot.app/Trap The Dot";
 			};
 			name = Debug;
 		};
@@ -560,10 +577,10 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "circle the dot - iosTests/Info.plist";
+				INFOPLIST_FILE = "Trap The Dot - iosTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "Trap The DotTests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/circle the dot - ios.app/circle the dot - ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trap The Dot.app/Trap The Dot";
 			};
 			name = Release;
 		};

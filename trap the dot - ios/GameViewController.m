@@ -1,6 +1,6 @@
 //
 //  GameViewController.m
-//  circle the dot - ios
+//  Trap The Dot - ios
 //
 //  Created by Reeonce on 14-9-18.
 //  Copyright (c) 2014年 Reeonce. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  GameViewController.h
-//  circle the dot - ios
+//  Trap The Dot - ios
 //
 
 //  Copyright (c) 2014年 Reeonce. All rights reserved.

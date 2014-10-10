@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Reeonce. All rights reserved.
 //
 
-#ifndef Circle_The_Dot_ReeTTDTypes_h
-#define Circle_The_Dot_ReeTTDTypes_h
+#ifndef Trap_The_Dot_ReeTTDTypes_h
+#define Trap_The_Dot_ReeTTDTypes_h
 
 
 typedef enum {

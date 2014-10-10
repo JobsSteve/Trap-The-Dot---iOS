@@ -1,6 +1,6 @@
 //
-//  circle_the_dot___iosTests.m
-//  circle the dot - iosTests
+//  Trap_The_Dot___iosTests.m
+//  Trap The Dot - iosTests
 //
 //  Created by Reeonce on 14-9-18.
 //  Copyright (c) 2014年 Reeonce. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface circle_the_dot___iosTests : XCTestCase
+@interface Trap_The_Dot___iosTests : XCTestCase
 
 @end
 
-@implementation circle_the_dot___iosTests
+@implementation Trap_The_Dot___iosTests
 
 - (void)setUp {
     [super setUp];

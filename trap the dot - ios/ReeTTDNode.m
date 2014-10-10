@@ -1,6 +1,6 @@
 //
 //  ReeTTDNode.m
-//  circle the dot - ios
+//  Trap The Dot - ios
 //
 //  Created by Reeonce Zeng on 9/22/14.
 //  Copyright (c) 2014 Reeonce. All rights reserved.

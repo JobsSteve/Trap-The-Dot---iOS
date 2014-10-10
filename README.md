@@ -1,3 +1,3 @@
-### Circle The Dot for iOS version
+## Trap The Dot for iOS version
 This game is built with SpriteKit framework.
 
