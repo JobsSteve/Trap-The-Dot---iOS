@@ -58,7 +58,7 @@
     [self addChild:descLabel];
     [self addChild:changeModeButton];
     if (self.userData.gameMode == ReeTTDModeRandom) {
-        [self addChild:replayButton];
+        //[self addChild:replayButton];
     } else {
         [self addChild:nextButton];
     }
@@ -111,7 +111,7 @@
 
 -(void)changeGameModeTo:(ReeTTDMode)mode {
     if (replayButton) {
-        [replayButton removeFromParent];
+        //[replayButton removeFromParent];
     }
     if (nextButton) {
         [nextButton removeFromParent];
@@ -120,7 +120,7 @@
         [self addChild:nextButton];
     } else {
         
-        [self addChild:replayButton];
+        //[self addChild:replayButton];
     }
 }
 

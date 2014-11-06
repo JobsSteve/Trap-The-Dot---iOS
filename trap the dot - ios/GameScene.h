@@ -21,7 +21,6 @@
 - (void)doRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 - (void)rotateToLandscape;
 - (void)rotateToPortrait;
--(void)goToMode:(ReeTTDMode)mode Level: (int)level;
 -(void)nextLevel;
 -(void)retryCurrentLevel;
 -(void)replayGame;

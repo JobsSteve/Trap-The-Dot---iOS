@@ -116,8 +116,8 @@
 	[self addChild:gameTitleLabel];
 	[self addChild:gameResultLabel];
 	[self addChild:gameBoard];
-	[self addChild:replayButton];
-	[self addChild:nextPlayButton];
+	//[self addChild:replayButton];
+	//[self addChild:nextPlayButton];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -128,11 +128,6 @@
     [resultBoard showResult:result stepsUsed:steps];
 	[resultBoard hiddenResult];
     [self addChild:resultBoard];
-}
-
--(void)goToMode:(ReeTTDMode)mode Level: (int)level {
-	[gameBoard renderGameWithMode:mode Level:level];
-	[self updateSteps:0];
 }
 
 -(void)nextLevel {
@@ -205,13 +200,13 @@
 /*position and size changes when rotate to portrait mode*/
 -(void)rotateToPortrait {
     gameBoard.position = CGPointMake(CGRectGetMidX(self.frame) - 210,
-                                 CGRectGetMaxY(self.frame) - 620);
+                                 CGRectGetMaxY(self.frame) - 660);
 	gameBoard.size = CGSizeMake(420, 360);
 	
     gameTitleLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                    CGRectGetMaxY(self.frame) - 100);
     gameResultLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                           CGRectGetMaxY(self.frame) - 180);
+                                           CGRectGetMaxY(self.frame) - 220);
 	
 	replayButton.size = CGSizeMake(46, 46);
 	replayButton.position = CGPointMake(CGRectGetMidX(self.frame) - 120,

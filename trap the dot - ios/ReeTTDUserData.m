@@ -12,9 +12,9 @@
 @implementation ReeTTDUserData
 
 /* This is a singleton instance */
-static ReeTTDUserData *userData;
 
 +(instancetype)getInstance {
+    static ReeTTDUserData *userData;
     if (!userData) {
         userData = [[ReeTTDUserData alloc] init];
         [userData readUserDataWithEasyLevelRange:[ReeTTDConfiguration getEasyLevelRange] hardLevelRange:[ReeTTDConfiguration getHardLevelRange]];
