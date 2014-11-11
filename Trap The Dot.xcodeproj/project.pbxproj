@@ -24,13 +24,12 @@
 		532EEEA719E7942A00C21119 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 532EEEA619E7942A00C21119 /* AppDelegate.m */; };
 		5332B4BD19D5181C00EBF4D9 /* ReeTTDConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5332B4BC19D5181C00EBF4D9 /* ReeTTDConfiguration.plist */; };
 		5332B4D119D7C9C900EBF4D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5332B4D319D7C9C900EBF4D9 /* Localizable.strings */; };
-		5344A68319D3D12A00DDCF2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5344A68219D3D12A00DDCF2A /* Default-568h@2x.png */; };
 		5349324A19E3EAD80092F6D2 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5349324919E3EAD80092F6D2 /* sound.mp3 */; };
+		534D63C51A0CA9AF005DFE95 /* LaunchImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534D63C41A0CA9AF005DFE95 /* LaunchImage.xcassets */; };
 		5352003C19E681A600F7B3DC /* Trap_The_Dot___iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D9D19CA8E5D009719D6 /* Trap_The_Dot___iosTests.m */; };
 		840C5D7F19CA8E5D009719D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D7E19CA8E5D009719D6 /* main.m */; };
 		840C5D8D19CA8E5D009719D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D8B19CA8E5D009719D6 /* Main.storyboard */; };
 		840C5D8F19CA8E5D009719D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D8E19CA8E5D009719D6 /* Images.xcassets */; };
-		840C5D9219CA8E5D009719D6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D9019CA8E5D009719D6 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,31 +83,22 @@
 		5332B4BC19D5181C00EBF4D9 /* ReeTTDConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReeTTDConfiguration.plist; sourceTree = "<group>"; };
 		5332B4D219D7C9C900EBF4D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5332B4D419D7C9F100EBF4D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5344A68219D3D12A00DDCF2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5349324919E3EAD80092F6D2 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = assets/sound.mp3; sourceTree = "<group>"; };
-		534D63AD1A0B264F005DFE95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		534D63AE1A0B2890005DFE95 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
-		534D63AF1A0B2899005DFE95 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		534D63B01A0B28A4005DFE95 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
-		534D63B11A0B28A6005DFE95 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		534D63B21A0B28B2005DFE95 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		534D63B31A0B28B6005DFE95 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		534D63B41A0B28C4005DFE95 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		534D63B51A0B28C5005DFE95 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		534D63B61A0B28CD005DFE95 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
-		534D63B71A0B28CF005DFE95 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		534D63B81A0B28D6005DFE95 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
-		534D63B91A0B28D8005DFE95 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		534D63BA1A0B28E0005DFE95 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
-		534D63BB1A0B28E1005DFE95 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt; path = pt.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		534D63BC1A0B28F1005DFE95 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		534D63BD1A0B28F3005DFE95 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		534D63BE1A0B2904005DFE95 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		534D63BF1A0B2907005DFE95 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		534D63C01A0B2909005DFE95 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		534D63C11A0B290C005DFE95 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		534D63C21A0B290F005DFE95 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		534D63C31A0B2951005DFE95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
+		534D63C41A0CA9AF005DFE95 /* LaunchImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = LaunchImage.xcassets; path = "../Trap The Dot/LaunchImage.xcassets"; sourceTree = "<group>"; };
 		840C5D7919CA8E5D009719D6 /* Trap The Dot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trap The Dot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840C5D7D19CA8E5D009719D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840C5D7E19CA8E5D009719D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -185,7 +175,6 @@
 		840C5D7019CA8E5D009719D6 = {
 			isa = PBXGroup;
 			children = (
-				5344A68219D3D12A00DDCF2A /* Default-568h@2x.png */,
 				840C5D7B19CA8E5D009719D6 /* trap the dot - ios */,
 				840C5D9A19CA8E5D009719D6 /* trap the dot - iosTests */,
 				840C5D7A19CA8E5D009719D6 /* Products */,
@@ -208,8 +197,8 @@
 				5332B4D319D7C9C900EBF4D9 /* Localizable.strings */,
 				5332B4C019D51F5E00EBF4D9 /* src */,
 				840C5D8B19CA8E5D009719D6 /* Main.storyboard */,
+				534D63C41A0CA9AF005DFE95 /* LaunchImage.xcassets */,
 				840C5D8E19CA8E5D009719D6 /* Images.xcassets */,
-				840C5D9019CA8E5D009719D6 /* LaunchScreen.xib */,
 				840C5D7C19CA8E5D009719D6 /* Supporting Files */,
 			);
 			name = "trap the dot - ios";
@@ -339,12 +328,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				534D63C51A0CA9AF005DFE95 /* LaunchImage.xcassets in Resources */,
 				5349324A19E3EAD80092F6D2 /* sound.mp3 in Resources */,
 				5332B4BD19D5181C00EBF4D9 /* ReeTTDConfiguration.plist in Resources */,
-				840C5D9219CA8E5D009719D6 /* LaunchScreen.xib in Resources */,
 				840C5D8F19CA8E5D009719D6 /* Images.xcassets in Resources */,
 				532EEE8E19E7940800C21119 /* GameScene.sks in Resources */,
-				5344A68319D3D12A00DDCF2A /* Default-568h@2x.png in Resources */,
 				5332B4D119D7C9C900EBF4D9 /* Localizable.strings in Resources */,
 				840C5D8D19CA8E5D009719D6 /* Main.storyboard in Resources */,
 			);
@@ -437,22 +425,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		840C5D9019CA8E5D009719D6 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				534D63AD1A0B264F005DFE95 /* en */,
-				534D63AF1A0B2899005DFE95 /* fr */,
-				534D63B11A0B28A6005DFE95 /* de */,
-				534D63B51A0B28C5005DFE95 /* ja */,
-				534D63B71A0B28CF005DFE95 /* es */,
-				534D63B91A0B28D8005DFE95 /* it */,
-				534D63BB1A0B28E1005DFE95 /* pt */,
-				534D63BD1A0B28F3005DFE95 /* ru */,
-				534D63C31A0B2951005DFE95 /* zh-Hans */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -539,28 +511,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ShareSDK/Connection",
-					"$(PROJECT_DIR)/ShareSDK/Core",
-					"$(PROJECT_DIR)/ShareSDK/Extend/GooglePlusSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/Pinterest.embeddedframework",
-					"$(PROJECT_DIR)/ShareSDK/Extend/QQConnectSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/RenRenSDK",
-					"$(PROJECT_DIR)/ShareSDK",
-					"$(PROJECT_DIR)/ShareSDK/UI",
 				);
 				INFOPLIST_FILE = "Trap The Dot - ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ShareSDK/Extend/SinaWeiboSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/TencentWeiboSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/YiXinSDK",
 				);
 				PRODUCT_NAME = "Trap The Dot";
 				PROVISIONING_PROFILE = "";
@@ -571,28 +532,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ShareSDK/Connection",
-					"$(PROJECT_DIR)/ShareSDK/Core",
-					"$(PROJECT_DIR)/ShareSDK/Extend/GooglePlusSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/Pinterest.embeddedframework",
-					"$(PROJECT_DIR)/ShareSDK/Extend/QQConnectSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/RenRenSDK",
-					"$(PROJECT_DIR)/ShareSDK",
-					"$(PROJECT_DIR)/ShareSDK/UI",
 				);
 				INFOPLIST_FILE = "Trap The Dot - ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ShareSDK/Extend/SinaWeiboSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/TencentWeiboSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/YiXinSDK",
 				);
 				PRODUCT_NAME = "Trap The Dot";
 				PROVISIONING_PROFILE = "";

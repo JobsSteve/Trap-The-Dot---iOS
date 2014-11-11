@@ -49,7 +49,7 @@
 }
 
 -(void)initNodes:(SKView *)view {
-    gameTitleLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    gameTitleLabel = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Bold"];
     gameTitleLabel.text = NSLocalizedString(@"GAME_TITLE" , @"Trap The Dot !");
     gameTitleLabel.zPosition = 100;
     gameTitleLabel.fontSize = 45;

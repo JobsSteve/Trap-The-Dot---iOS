@@ -39,7 +39,7 @@
     loseDescription = NSLocalizedString(@"LOSE_DESCRIPTION", @"The dot escaped. T_T");
     
     resultLabel = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Bold"];
-    resultLabel.fontSize = 40;
+    resultLabel.fontSize = 36;
     resultLabel.fontColor = [SKColor colorWithWhite: 0.9 alpha:1.0];
     resultLabel.position = CGPointMake(CGRectGetMidX(self.frame), 580);
     
