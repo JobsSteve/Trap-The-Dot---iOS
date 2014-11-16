@@ -14,6 +14,7 @@
 #import "ReeTTDConfiguration.h"
 #import "ReeTTDUserData.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "MobClickGameAnalytics.h"
 
 const int defaultXLength = 9;
 const int defaultYLength = 9;
@@ -69,10 +70,13 @@ const int defaltLevel = 0;
     int netCount;
     if (mode == ReeTTDModeRandom) {
         netCount = rand() % 15 + 4;
+        [MobClickGameAnalytics startLevel: [NSString stringWithFormat: @"Random"]];
     } else if (mode == ReeTTDModeEasy) {
         netCount = (easyModeTotalLevels - currentLevel) * 3 + 18;
+        [MobClickGameAnalytics startLevel: [NSString stringWithFormat: @"Easy: %d", currentLevel]];
     } else if (mode == ReeTTDModeHard) {
         netCount = (hardModeTotalLevels - currentLevel) * 3 + 3;
+        [MobClickGameAnalytics startLevel: [NSString stringWithFormat: @"Hard: %d", currentLevel]];
     } else {
         netCount = 0;
     }
@@ -282,13 +286,16 @@ const int defaltLevel = 0;
             [sprite changeType:normalNode];
             if (nextStep.x < 0 || nextStep.x >= x_length || nextStep.y < 0 || nextStep.y >= y_length) {
                 self.gameState = ReeTTDGameStateLose;
+                [MobClickGameAnalytics failLevel: [NSString stringWithFormat: @"lose %d with %d steps", currentLevel, steps]];
                 [self finishGame];
             } else if (nextStep.x == dot_pos.x && nextStep.y == dot_pos.y) {
                 if (gameMode == ReeTTDModeRandom) {
+                    [MobClickGameAnalytics finishLevel: [NSString stringWithFormat: @"random with %d steps", steps]];
                     if (self.userData.randomModeScore < 0 || steps < self.userData.randomModeScore) {
                         self.userData.randomModeScore = steps;
                     }
                 } else if (gameMode == ReeTTDModeEasy) {
+                    [MobClickGameAnalytics finishLevel: [NSString stringWithFormat: @"Easy: %d with %d steps", currentLevel, steps]];
                     if (currentLevel-1 < self.userData.easyLevelScores.count) {
                         NSNumber *num = [self.userData.easyLevelScores objectAtIndex:currentLevel-1];
                         int originScore = [num intValue];
@@ -301,6 +308,7 @@ const int defaltLevel = 0;
 
                     }
                 } else if (gameMode == ReeTTDModeHard) {
+                    [MobClickGameAnalytics finishLevel: [NSString stringWithFormat: @"hard: %d with %d steps", currentLevel, steps]];
                     if (currentLevel-1 < self.userData.hardLevelScores.count) {
                         NSNumber *num = [self.userData.hardLevelScores objectAtIndex:currentLevel-1];
                         int originScore = [num intValue];

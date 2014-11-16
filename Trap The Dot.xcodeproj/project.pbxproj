@@ -27,6 +27,9 @@
 		5349324A19E3EAD80092F6D2 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5349324919E3EAD80092F6D2 /* sound.mp3 */; };
 		534D63C51A0CA9AF005DFE95 /* LaunchImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534D63C41A0CA9AF005DFE95 /* LaunchImage.xcassets */; };
 		5352003C19E681A600F7B3DC /* Trap_The_Dot___iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D9D19CA8E5D009719D6 /* Trap_The_Dot___iosTests.m */; };
+		5367DF8B1A18EF7700CF407D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5367DF8D1A18EF7700CF407D /* InfoPlist.strings */; };
+		5367DF9D1A18FB7500CF407D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367DF9C1A18FB7500CF407D /* libz.dylib */; };
+		53F322F01A19050E008A981F /* libMobClickGameLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F322ED1A19050E008A981F /* libMobClickGameLibrary.a */; };
 		840C5D7F19CA8E5D009719D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D7E19CA8E5D009719D6 /* main.m */; };
 		840C5D8D19CA8E5D009719D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D8B19CA8E5D009719D6 /* Main.storyboard */; };
 		840C5D8F19CA8E5D009719D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D8E19CA8E5D009719D6 /* Images.xcassets */; };
@@ -99,6 +102,20 @@
 		534D63C11A0B290C005DFE95 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		534D63C21A0B290F005DFE95 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		534D63C41A0CA9AF005DFE95 /* LaunchImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = LaunchImage.xcassets; path = "../Trap The Dot/LaunchImage.xcassets"; sourceTree = "<group>"; };
+		5367DF8C1A18EF7700CF407D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5367DF8E1A18EF7A00CF407D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		5367DF8F1A18EF7F00CF407D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5367DF901A18F66D00CF407D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5367DF911A18F66E00CF407D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5367DF921A18F66F00CF407D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5367DF931A18F66F00CF407D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5367DF941A18F67000CF407D /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5367DF951A18F67000CF407D /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5367DF961A18F67100CF407D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5367DF9C1A18FB7500CF407D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		53F322ED1A19050E008A981F /* libMobClickGameLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickGameLibrary.a; sourceTree = "<group>"; };
+		53F322EE1A19050E008A981F /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		53F322EF1A19050E008A981F /* MobClickGameAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickGameAnalytics.h; sourceTree = "<group>"; };
 		840C5D7919CA8E5D009719D6 /* Trap The Dot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trap The Dot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840C5D7D19CA8E5D009719D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840C5D7E19CA8E5D009719D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,6 +131,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5367DF9D1A18FB7500CF407D /* libz.dylib in Frameworks */,
+				53F322F01A19050E008A981F /* libMobClickGameLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,9 +191,20 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		5367DF9B1A18FB4300CF407D /* UmengGameAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				53F322ED1A19050E008A981F /* libMobClickGameLibrary.a */,
+				53F322EE1A19050E008A981F /* MobClick.h */,
+				53F322EF1A19050E008A981F /* MobClickGameAnalytics.h */,
+			);
+			name = UmengGameAnalytics;
+			sourceTree = "<group>";
+		};
 		840C5D7019CA8E5D009719D6 = {
 			isa = PBXGroup;
 			children = (
+				5367DF9C1A18FB7500CF407D /* libz.dylib */,
 				840C5D7B19CA8E5D009719D6 /* trap the dot - ios */,
 				840C5D9A19CA8E5D009719D6 /* trap the dot - iosTests */,
 				840C5D7A19CA8E5D009719D6 /* Products */,
@@ -193,6 +223,7 @@
 		840C5D7B19CA8E5D009719D6 /* trap the dot - ios */ = {
 			isa = PBXGroup;
 			children = (
+				5367DF9B1A18FB4300CF407D /* UmengGameAnalytics */,
 				5349323519E3EAB00092F6D2 /* Resources */,
 				5332B4D319D7C9C900EBF4D9 /* Localizable.strings */,
 				5332B4C019D51F5E00EBF4D9 /* src */,
@@ -211,6 +242,7 @@
 				5332B4BC19D5181C00EBF4D9 /* ReeTTDConfiguration.plist */,
 				840C5D7D19CA8E5D009719D6 /* Info.plist */,
 				840C5D7E19CA8E5D009719D6 /* main.m */,
+				5367DF8D1A18EF7700CF407D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -329,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				534D63C51A0CA9AF005DFE95 /* LaunchImage.xcassets in Resources */,
+				5367DF8B1A18EF7700CF407D /* InfoPlist.strings in Resources */,
 				5349324A19E3EAD80092F6D2 /* sound.mp3 in Resources */,
 				5332B4BD19D5181C00EBF4D9 /* ReeTTDConfiguration.plist in Resources */,
 				840C5D8F19CA8E5D009719D6 /* Images.xcassets in Resources */,
@@ -408,6 +441,23 @@
 				534D63C21A0B290F005DFE95 /* ru */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		5367DF8D1A18EF7700CF407D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5367DF8C1A18EF7700CF407D /* en */,
+				5367DF8E1A18EF7A00CF407D /* zh-Hans */,
+				5367DF8F1A18EF7F00CF407D /* fr */,
+				5367DF901A18F66D00CF407D /* Base */,
+				5367DF911A18F66E00CF407D /* de */,
+				5367DF921A18F66F00CF407D /* ja */,
+				5367DF931A18F66F00CF407D /* es */,
+				5367DF941A18F67000CF407D /* it */,
+				5367DF951A18F67000CF407D /* pt */,
+				5367DF961A18F67100CF407D /* ru */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		840C5D8B19CA8E5D009719D6 /* Main.storyboard */ = {
@@ -514,9 +564,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Trap The Dot - ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -535,9 +583,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Trap The Dot - ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

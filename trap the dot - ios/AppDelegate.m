@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MobClick.h"
+#import "ReeTTDConfiguration.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.    
+    // Override point for customization after application launch.
+    NSString *AppKey = (NSString *)[ReeTTDConfiguration getValueWithKey:@"UmengAppKey"];
+    [MobClick startWithAppkey:AppKey];
     return YES;
 }
 
