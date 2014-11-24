@@ -34,7 +34,6 @@
 
 @property (nonatomic) ReeTTDBoard *gameBoard;
 
-
 @property (nonatomic) SKLabelNode *gameTitleLabel;
 
 @property (nonatomic) SKLabelNode *gameResultLabel;
@@ -46,5 +45,7 @@
 @property (nonatomic) SKSpriteNode *replayButton;
 
 @property (nonatomic) SKSpriteNode *nextPlayButton;
+
+@property (nonatomic) UIImage *playImage;
 
 @end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6FC686C1-4DA4-4448-A7C4-304B4B9935BB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Trap The Dot</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>380F54FF14F2DB422816D765C207BAD3B9FD25C7</key>
+		<string>github.com:reeonce/Trap-The-Dot---iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Trap The Dot.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>380F54FF14F2DB422816D765C207BAD3B9FD25C7</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:reeonce/Trap-The-Dot---iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>380F54FF14F2DB422816D765C207BAD3B9FD25C7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>380F54FF14F2DB422816D765C207BAD3B9FD25C7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Trap%20The%20Dot%20-%20ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

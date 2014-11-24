@@ -12,10 +12,11 @@
 #import "ReeTTDButton.h"
 #import "ReeTTDConfiguration.h"
 #import "ReeSwitchIcon.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import "AppDelegate.h"
 
 @implementation GameScene {
     SKView *skView;
-	
 }
 
 @synthesize gameBoard = gameBoard;
@@ -28,7 +29,6 @@
 
 -(void)didMoveToView:(SKView *)view {
 	self.userData = [ReeTTDUserData getInstance];
-	
     skView = view;
 	if (self.userData.colorful) {
 		self.backgroundColor = [SKColor colorWithWhite:0.6 alpha:1];

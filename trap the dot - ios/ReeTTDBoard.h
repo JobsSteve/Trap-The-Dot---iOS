@@ -17,7 +17,8 @@
 -(BOOL)nextLevel;
 -(void)retryCurrentLevel;
 -(void)replayCurrentLevel;
--(void)finishGame;
+-(void)gameDidEnd: (BOOL)isWin;
+-(NSString *) getCurrentLevelString;
 
 @property double nodeWidth;
 @property double nodeHeight;
@@ -29,6 +30,22 @@
 
 @property ReeTTDGameState gameState;
 
-@property (readonly, nonatomic) ReeTTDDirection previousDirection;
+@property (nonatomic) ReeTTDDirection previousDirection;
+
+@property (nonatomic) CGSize nodeSize;
+@property (nonatomic) int x_length;
+@property (nonatomic) int y_length;
+@property (nonatomic) int currentLevel;
+
+@property (nonatomic) NSMutableArray *gameBoard;
+
+@property (nonatomic) ReeTTDDotPosition dot_pos;
+
+@property (nonatomic) NSMutableArray *reachableNets;
+@property (nonatomic) NSMutableArray *reachableCircles;
+
+@property (nonatomic) ReeTTDMode gameMode;
+
+@property (nonatomic) UIImage *playImage;
 
 @end

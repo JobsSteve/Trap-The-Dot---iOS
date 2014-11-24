@@ -29,7 +29,10 @@
 		5352003C19E681A600F7B3DC /* Trap_The_Dot___iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D9D19CA8E5D009719D6 /* Trap_The_Dot___iosTests.m */; };
 		5367DF8B1A18EF7700CF407D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5367DF8D1A18EF7700CF407D /* InfoPlist.strings */; };
 		5367DF9D1A18FB7500CF407D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367DF9C1A18FB7500CF407D /* libz.dylib */; };
-		53F322F01A19050E008A981F /* libMobClickGameLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F322ED1A19050E008A981F /* libMobClickGameLibrary.a */; };
+		53A7485F1A1D717B00E5DA43 /* ReeTTDBoard-PlayGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A7485E1A1D717B00E5DA43 /* ReeTTDBoard-PlayGame.m */; };
+		53DF3CF71A21D99C00FA2514 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF3CF61A21D99C00FA2514 /* FacebookSDK.framework */; };
+		53EDE97F1A218FA1004464B4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EDE97E1A218FA1004464B4 /* StoreKit.framework */; };
+		644D661BF23D4A2FAD57F0AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 241CBB4FA44CBEE0DE987BE9 /* libPods.a */; };
 		840C5D7F19CA8E5D009719D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C5D7E19CA8E5D009719D6 /* main.m */; };
 		840C5D8D19CA8E5D009719D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D8B19CA8E5D009719D6 /* Main.storyboard */; };
 		840C5D8F19CA8E5D009719D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840C5D8E19CA8E5D009719D6 /* Images.xcassets */; };
@@ -53,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		241CBB4FA44CBEE0DE987BE9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B36AB2366F60B126CC49774 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		53152FE31A20E28E00443DE0 /* MobClickGameAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickGameAnalytics.h; sourceTree = "<group>"; };
 		532EEE7B19E7940800C21119 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		532EEE7C19E7940800C21119 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		532EEE7D19E7940800C21119 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -113,9 +119,11 @@
 		5367DF951A18F67000CF407D /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5367DF961A18F67100CF407D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5367DF9C1A18FB7500CF407D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		53F322ED1A19050E008A981F /* libMobClickGameLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickGameLibrary.a; sourceTree = "<group>"; };
-		53F322EE1A19050E008A981F /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
-		53F322EF1A19050E008A981F /* MobClickGameAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickGameAnalytics.h; sourceTree = "<group>"; };
+		53A7485D1A1D711600E5DA43 /* ReeTTDBoard-PlayGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReeTTDBoard-PlayGame.h"; sourceTree = "<group>"; };
+		53A7485E1A1D717B00E5DA43 /* ReeTTDBoard-PlayGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ReeTTDBoard-PlayGame.m"; sourceTree = "<group>"; };
+		53DF3CF61A21D99C00FA2514 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		53EDE97E1A218FA1004464B4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		68D61167171D9C142B0D4E6B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		840C5D7919CA8E5D009719D6 /* Trap The Dot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trap The Dot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840C5D7D19CA8E5D009719D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840C5D7E19CA8E5D009719D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -131,8 +139,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53DF3CF71A21D99C00FA2514 /* FacebookSDK.framework in Frameworks */,
+				53EDE97F1A218FA1004464B4 /* StoreKit.framework in Frameworks */,
 				5367DF9D1A18FB7500CF407D /* libz.dylib in Frameworks */,
-				53F322F01A19050E008A981F /* libMobClickGameLibrary.a in Frameworks */,
+				644D661BF23D4A2FAD57F0AD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +171,8 @@
 				532EEE9819E7941B00C21119 /* ReeSwitchIcon.h */,
 				532EEE9919E7941B00C21119 /* ReeSwitchIcon.m */,
 				532EEE9A19E7941B00C21119 /* ReeTTDBoard.h */,
+				53A7485D1A1D711600E5DA43 /* ReeTTDBoard-PlayGame.h */,
+				53A7485E1A1D717B00E5DA43 /* ReeTTDBoard-PlayGame.m */,
 				532EEE9B19E7941B00C21119 /* ReeTTDBoard.m */,
 				532EEE9C19E7941B00C21119 /* ReeTTDButton.h */,
 				532EEE9D19E7941B00C21119 /* ReeTTDButton.m */,
@@ -191,16 +203,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		5367DF9B1A18FB4300CF407D /* UmengGameAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				53F322ED1A19050E008A981F /* libMobClickGameLibrary.a */,
-				53F322EE1A19050E008A981F /* MobClick.h */,
-				53F322EF1A19050E008A981F /* MobClickGameAnalytics.h */,
-			);
-			name = UmengGameAnalytics;
-			sourceTree = "<group>";
-		};
 		840C5D7019CA8E5D009719D6 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +210,8 @@
 				840C5D7B19CA8E5D009719D6 /* trap the dot - ios */,
 				840C5D9A19CA8E5D009719D6 /* trap the dot - iosTests */,
 				840C5D7A19CA8E5D009719D6 /* Products */,
+				971BCD81A1E91B86A48E38BF /* Pods */,
+				8DBABCDF609AD624985F64A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,7 +227,7 @@
 		840C5D7B19CA8E5D009719D6 /* trap the dot - ios */ = {
 			isa = PBXGroup;
 			children = (
-				5367DF9B1A18FB4300CF407D /* UmengGameAnalytics */,
+				53152FE31A20E28E00443DE0 /* MobClickGameAnalytics.h */,
 				5349323519E3EAB00092F6D2 /* Resources */,
 				5332B4D319D7C9C900EBF4D9 /* Localizable.strings */,
 				5332B4C019D51F5E00EBF4D9 /* src */,
@@ -265,6 +269,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8DBABCDF609AD624985F64A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53DF3CF61A21D99C00FA2514 /* FacebookSDK.framework */,
+				53EDE97E1A218FA1004464B4 /* StoreKit.framework */,
+				241CBB4FA44CBEE0DE987BE9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		971BCD81A1E91B86A48E38BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B36AB2366F60B126CC49774 /* Pods.debug.xcconfig */,
+				68D61167171D9C142B0D4E6B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,9 +295,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 840C5DA119CA8E5D009719D6 /* Build configuration list for PBXNativeTarget "Trap The Dot" */;
 			buildPhases = (
+				4A22E6C2A53F6A705BA43EBB /* Check Pods Manifest.lock */,
 				840C5D7519CA8E5D009719D6 /* Sources */,
 				840C5D7619CA8E5D009719D6 /* Frameworks */,
 				840C5D7719CA8E5D009719D6 /* Resources */,
+				7851723571DBEA866AB5F199 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -318,7 +343,7 @@
 						DevelopmentTeam = L8WRN24LQD;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -380,6 +405,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4A22E6C2A53F6A705BA43EBB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7851723571DBEA866AB5F199 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		840C5D7519CA8E5D009719D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -399,6 +457,7 @@
 				532EEE9119E7940800C21119 /* ReeTTDLevelsBoard.m in Sources */,
 				532EEEA019E7941B00C21119 /* ReeQueue.m in Sources */,
 				840C5D7F19CA8E5D009719D6 /* main.m in Sources */,
+				53A7485F1A1D717B00E5DA43 /* ReeTTDBoard-PlayGame.m in Sources */,
 				532EEEA719E7942A00C21119 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,18 +618,20 @@
 		};
 		840C5DA219CA8E5D009719D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B36AB2366F60B126CC49774 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/reeonce/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Trap The Dot - ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "Trap The Dot";
 				PROVISIONING_PROFILE = "";
 			};
@@ -578,18 +639,20 @@
 		};
 		840C5DA319CA8E5D009719D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68D61167171D9C142B0D4E6B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/reeonce/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Trap The Dot - ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "Trap The Dot";
 				PROVISIONING_PROFILE = "";
 			};

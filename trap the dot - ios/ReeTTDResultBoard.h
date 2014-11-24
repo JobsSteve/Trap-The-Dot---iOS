@@ -15,7 +15,8 @@
 - (void) viewDidLoad: (SKView  *)view;
 - (void) showResult: (ReeTTDResult)result stepsUsed:(int)steps;
 - (void) hiddenResult;
--(void)changeGameModeTo:(ReeTTDMode)mode;
+- (void)changeGameModeTo:(ReeTTDMode)mode;
+- (void)shareFBContent;
 
 @property (nonatomic) ReeTTDUserData *userData;
 

@@ -15,23 +15,14 @@
 #import "ReeTTDUserData.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "MobClickGameAnalytics.h"
+#import "GameScene.h"
+#import "ReeTTDBoard-PlayGame.h"
 
 const int defaultXLength = 9;
 const int defaultYLength = 9;
 const int defaltLevel = 0;
 
 @implementation ReeTTDBoard {
-    CGSize nodeSize;
-    int x_length;
-    int y_length;
-    
-    NSMutableArray *gameBoard;
-    
-    ReeTTDDotPosition dot_pos;
-    
-    ReeTTDMode gameMode;
-    int currentLevel;
-    
     int originNets[100];
     int originNetsCount;
     
@@ -40,6 +31,15 @@ const int defaltLevel = 0;
 }
 
 @synthesize steps = steps;
+@synthesize nodeSize = nodeSize;
+@synthesize x_length = x_length;
+@synthesize y_length = y_length;
+
+@synthesize gameBoard = gameBoard;
+
+@synthesize dot_pos = dot_pos;
+@synthesize gameMode = gameMode;
+@synthesize currentLevel = currentLevel;
 
 - (void)setSize: (CGSize)p_size {
     super.size = p_size;
@@ -70,16 +70,15 @@ const int defaltLevel = 0;
     int netCount;
     if (mode == ReeTTDModeRandom) {
         netCount = rand() % 15 + 4;
-        [MobClickGameAnalytics startLevel: [NSString stringWithFormat: @"Random"]];
     } else if (mode == ReeTTDModeEasy) {
         netCount = (easyModeTotalLevels - currentLevel) * 3 + 18;
-        [MobClickGameAnalytics startLevel: [NSString stringWithFormat: @"Easy: %d", currentLevel]];
     } else if (mode == ReeTTDModeHard) {
         netCount = (hardModeTotalLevels - currentLevel) * 3 + 3;
-        [MobClickGameAnalytics startLevel: [NSString stringWithFormat: @"Hard: %d", currentLevel]];
     } else {
         netCount = 0;
     }
+    
+    [MobClickGameAnalytics startLevel: [self getCurrentLevelString]];
     [self renderGameWithXLen: defaultXLength YLen: defaultYLength];
     [self renderNetNodesRandWithNumber:netCount];
     
@@ -193,171 +192,41 @@ const int defaltLevel = 0;
     }
 }
 
--(void)finishGame {
-}
-
--(CGPoint)getPositionByX: (int)x Y: (int)y {
+- (CGPoint)getPositionByX: (int)x Y: (int)y {
     CGPoint point;
     point.x = nodeSize.width * (y +  (x % 2) / 2.0 );
     point.y = nodeSize.height * x;
     return point;
 }
 
--(ReeTTDDotPosition)getIndexByPosition: (CGPoint)pos {
-    ReeTTDDotPosition p;
-    p.x = pos.y / nodeSize.height;
-    p.y = pos.x / nodeSize.width - (p.x % 2) / 2.0;
-    p.y = p.y < 0? 0: p.y;
-    p.y = p.y >= y_length? y_length-1: p.y;
-    return p;
+-(void)gameDidEnd: (BOOL)isWin {
+    GameScene *gs = (GameScene *)self.scene;
+    
+    if (isWin) {
+        [MobClickGameAnalytics finishLevel: [self getCurrentLevelString]];
+        self.gameState = ReeTTDGameStateWin;
+    } else {
+        [MobClickGameAnalytics failLevel: [self getCurrentLevelString]];
+        self.gameState = ReeTTDGameStateLose;
+    }
+    
+    
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(gs.view.frame.size.height, gs.view.frame.size.width), NO, 0.0);
+    [gs.view drawViewHierarchyInRect:CGRectMake(230, 0, gs.size.width - 500, gs.size.height) afterScreenUpdates:YES];
+    gs.playImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
 }
 
--(ReeTTDDotPosition)searchNext {
-    ReeTTDDotPosition pos = dot_pos;
-    
-    ReeQueue *queue = [[ReeQueue alloc] initWithCapacity: (x_length * y_length)];
-    
-    ReeTTDNode *dotNode = [[gameBoard objectAtIndex:dot_pos.x] objectAtIndex: dot_pos.y];
-    
-    ReeTTDDotPosition step[x_length][y_length];
-    int isVisited[x_length][y_length];
-    for (int i=0; i<x_length; i++) {
-        for (int j=0; j<y_length; j++) {
-            step[i][j].x = i;
-            step[i][j].y = j;
-            isVisited[i][j] = 0;
-        }
+-(NSString *) getCurrentLevelString {
+    NSString * levelString;
+    if (gameMode == ReeTTDModeRandom) {
+        levelString = [NSString stringWithFormat: @"Random"];
+    } else if (gameMode == ReeTTDModeEasy) {
+        levelString = [NSString stringWithFormat: @"Easy_%d", currentLevel];
+    } else {
+        levelString = [NSString stringWithFormat: @"Hard_%d", currentLevel];
     }
-    
-    isVisited[dot_pos.x][dot_pos.y] = 1;
-    for (int i=_previousDirection; i<6+_previousDirection; i++) {
-        ReeTTDDirection dire = i % 6;
-        ReeTTDNode *node;
-        ReeTTDDotPosition p = [dotNode getPositionByDirection:dire];
-        if (p.x < 0 || p.x >= x_length || p.y < 0 || p.y >= y_length) {
-            return p;
-        }
-        isVisited[p.x][p.y] = 1;
-        node = [[gameBoard objectAtIndex:p.x] objectAtIndex: p.y];
-        if ([node nodeType] == normalNode) {
-            [queue enQueue:node];
-            pos = p;
-        }
-    }
-    while (queue.count > 0) {
-        ReeTTDNode *node = [queue deQueue];
-        for (int i=_previousDirection; i<6+_previousDirection; i++) {
-            ReeTTDDirection dire = i % 6;
-            ReeTTDDotPosition p = [node getPositionByDirection:dire];
-            if (p.x < 0 || p.x >= x_length || p.y < 0 || p.y >= y_length) {
-                _previousDirection = [dotNode directionToNearbyNodePos:step[node.nodePos.x][node.nodePos.y]];
-                return step[node.nodePos.x][node.nodePos.y];
-            }
-            if (step[p.x][p.y].x == p.x && step[p.x][p.y].y == p.y && isVisited[p.x][p.y] == 0) {
-                isVisited[p.x][p.y] = 1;
-                step[p.x][p.y] = step[node.nodePos.x][node.nodePos.y];
-                ReeTTDNode *nearNode = [[gameBoard objectAtIndex:p.x] objectAtIndex: p.y];
-                if ([nearNode nodeType] == normalNode) {
-                    [queue enQueue:nearNode];
-                }
-                pos = step[p.x][p.y];
-            }
-        }
-    }
-    
-    _previousDirection = [dotNode directionToNearbyNodePos:pos];
-    return pos;
-}
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *touch in touches) {
-        ReeTTDDotPosition clickedNodePos = [self getIndexByPosition:[touch locationInNode:self]];
-        ReeTTDNode *node;
-        if (clickedNodePos.x < gameBoard.count) {
-            NSArray *row = [gameBoard objectAtIndex:clickedNodePos.x];
-            if (clickedNodePos.y < row.count) {
-                node = [row objectAtIndex: clickedNodePos.y];
-            }
-        }
-        if ([node clicked]) {
-            self.steps ++;
-            ReeTTDDotPosition nextStep = [self searchNext];
-            ReeTTDNode *sprite = [[gameBoard objectAtIndex:dot_pos.x] objectAtIndex: dot_pos.y];
-            [sprite changeType:normalNode];
-            if (nextStep.x < 0 || nextStep.x >= x_length || nextStep.y < 0 || nextStep.y >= y_length) {
-                self.gameState = ReeTTDGameStateLose;
-                [MobClickGameAnalytics failLevel: [NSString stringWithFormat: @"lose %d with %d steps", currentLevel, steps]];
-                [self finishGame];
-            } else if (nextStep.x == dot_pos.x && nextStep.y == dot_pos.y) {
-                if (gameMode == ReeTTDModeRandom) {
-                    [MobClickGameAnalytics finishLevel: [NSString stringWithFormat: @"random with %d steps", steps]];
-                    if (self.userData.randomModeScore < 0 || steps < self.userData.randomModeScore) {
-                        self.userData.randomModeScore = steps;
-                    }
-                } else if (gameMode == ReeTTDModeEasy) {
-                    [MobClickGameAnalytics finishLevel: [NSString stringWithFormat: @"Easy: %d with %d steps", currentLevel, steps]];
-                    if (currentLevel-1 < self.userData.easyLevelScores.count) {
-                        NSNumber *num = [self.userData.easyLevelScores objectAtIndex:currentLevel-1];
-                        int originScore = [num intValue];
-                        if (originScore < 0 || steps < originScore) {
-                            NSNumber *newScore = [[NSNumber alloc] initWithInt:steps];
-                            NSMutableArray *a = [NSMutableArray arrayWithArray:self.userData.easyLevelScores];
-                            [a setObject:newScore atIndexedSubscript:currentLevel-1];
-                            self.userData.easyLevelScores = a;
-                        }
-
-                    }
-                } else if (gameMode == ReeTTDModeHard) {
-                    [MobClickGameAnalytics finishLevel: [NSString stringWithFormat: @"hard: %d with %d steps", currentLevel, steps]];
-                    if (currentLevel-1 < self.userData.hardLevelScores.count) {
-                        NSNumber *num = [self.userData.hardLevelScores objectAtIndex:currentLevel-1];
-                        int originScore = [num intValue];
-                        if (originScore < 0 || steps < originScore) {
-                            NSNumber *newScore = [[NSNumber alloc] initWithInt:steps];
-                            NSMutableArray *a = [NSMutableArray arrayWithArray:self.userData.hardLevelScores];
-                            [a setObject:newScore atIndexedSubscript:currentLevel-1];
-                            self.userData.hardLevelScores = a;
-                        }
-                    }
-                }
-                self.gameState = ReeTTDGameStateWin;
-                [self finishGame];
-            }
-            else {
-                dot_pos = nextStep;
-                sprite = [[gameBoard objectAtIndex:nextStep.x] objectAtIndex: nextStep.y];
-                [sprite changeType:dotNode];
-                [self playJumpSound];
-            }
-        }
-    }
-}
-
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"stateOn"]) {
-        BOOL changedState = [[change objectForKey:NSKeyValueChangeNewKey] boolValue];
-        self.soundOn = changedState;
-    } else if ([keyPath isEqualToString:@"colorful"]) {
-        int i=0, j;
-        for (NSMutableArray *row in gameBoard) {
-            j=0;
-            for (ReeTTDNode *node in row) {
-                [node changeType:node.nodeType];
-                j++;
-            }
-            i ++;
-        }
-    }
-}
-
--(void)playJumpSound {
-    if (self.soundOn) {
-        SystemSoundID soundID;
-        NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/sound.mp3", [[NSBundle mainBundle] resourcePath]]];
-        
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &soundID);
-        AudioServicesPlaySystemSound (soundID);
-    }
+    return levelString;
 }
 
 @end
