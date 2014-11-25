@@ -19,5 +19,7 @@
 - (void)shareFBContent;
 
 @property (nonatomic) ReeTTDUserData *userData;
+@property (nonatomic) BOOL resultIsWin;
+@property (nonatomic) int steps;
 
 @end

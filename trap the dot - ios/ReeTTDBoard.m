@@ -210,9 +210,12 @@ const int defaltLevel = 0;
         self.gameState = ReeTTDGameStateLose;
     }
     
-    
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(gs.view.frame.size.height, gs.view.frame.size.width), NO, 0.0);
-    [gs.view drawViewHierarchyInRect:CGRectMake(230, 0, gs.size.width - 500, gs.size.height) afterScreenUpdates:YES];
+    CGRect rect = gs.view.bounds;
+    rect.size.width = rect.size.height;
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 1.0);
+    CGRect rect1 = gs.view.bounds;
+    rect1.origin.x = (rect1.size.height - rect1.size.width) / 2;
+    [gs.view drawViewHierarchyInRect: rect1 afterScreenUpdates:NO];
     gs.playImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 }

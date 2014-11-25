@@ -72,7 +72,7 @@
 	[self.userData addObserver:gameBoard forKeyPath:@"colorful" options:NSKeyValueObservingOptionNew context:nil];
 	
     /*init the board when ending one game*/
-    resultBoard = [ReeTTDResultBoard spriteNodeWithColor:[SKColor colorWithWhite:0.5 alpha:0.95] size:CGSizeMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
+    resultBoard = [ReeTTDResultBoard spriteNodeWithColor:[SKColor colorWithWhite:0.5 alpha:0.88] size:CGSizeMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
     resultBoard.anchorPoint = CGPointMake(0, 0);
     resultBoard.zPosition = 10;
     [resultBoard viewDidLoad:view];

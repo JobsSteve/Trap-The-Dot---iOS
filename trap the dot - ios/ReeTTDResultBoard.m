@@ -12,6 +12,8 @@
 #import "ReeTTDConfiguration.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "AppDelegate.h"
+#import "GameViewController.h"
+#import "FBShareButton.h"
 
 @implementation ReeTTDResultBoard {
     NSString *winTitle;
@@ -27,7 +29,7 @@
     ReeTTDButton *replayButton;
     ReeTTDButton *changeModeButton;
     ReeTTDButton *rateButton;
-    ReeTTDButton *shareFBButton;
+    FBShareButton *shareFBButton;
     
     SKView *skView;
 }
@@ -62,7 +64,7 @@
     changeModeButton = [ReeTTDButton ButtonWithRect:button3 cornerRadius:8.0 Text:NSLocalizedString(@"HOME", @"Home")];
     rateButton = [ReeTTDButton ButtonWithRect:button4 cornerRadius:8.0 Text:NSLocalizedString(@"RATE_ME", @"评分")];
     
-    shareFBButton = [ReeTTDButton ButtonWithRect:button4 cornerRadius:8.0 Text:NSLocalizedString(@"Share", @"分享")];
+    shareFBButton = [FBShareButton fbShareButtonWithRect: button4 cornerRadius:8.0 Text:NSLocalizedString(@"SHARE", @"The text of 'Share'")];
     
     
     [self addChild:resultLabel];
@@ -116,9 +118,12 @@
     if (result == gameWin) {
         resultLabel.text = winTitle;
         descLabel.text = [NSString stringWithFormat:winDescription, steps];
+        self.resultIsWin = YES;
+        self.steps = steps;
     } else {
         resultLabel.text = loseTitle;
         descLabel.text = loseDescription;
+        self.resultIsWin = NO;
     }
 }
 
@@ -135,6 +140,7 @@ CGRect button4;
 -(void)changeGameModeTo:(ReeTTDMode)mode {
     if (nextButton) {
         [nextButton removeFromParent];
+        [shareFBButton removeFromParent];
     }
     if (mode == ReeTTDModeEasy || mode == ReeTTDModeHard) {
         [self addChild:nextButton];
@@ -145,6 +151,7 @@ CGRect button4;
         againButton.position = button1.origin;
         changeModeButton.position = button2.origin;
         rateButton.position = button3.origin;
+        [self addChild:shareFBButton];
     }
 }
 
@@ -153,40 +160,55 @@ CGRect button4;
     
     __block ReeTTDResultBoard *rb = self;
     
-    if (FBSession.activeSession.state == FBSessionStateOpen
-        || FBSession.activeSession.state == FBSessionStateOpenTokenExtended) {
-        
-        // Close the session and remove the access token from the cache
-        // The session state handler (in the app delegate) will be called automatically
+    if (FBSession.activeSession.state == FBSessionStateOpen) {
+
         [rb shareFBContent];
         
         // If the session state is not any of the two "open" states when the button is clicked
     } else {
-        // Open a session showing the user the login UI
-        // You must ALWAYS ask for public_profile permissions when opening a session
+        GameViewController *controller = (GameViewController* )self.scene.view.window.rootViewController;
         
-        [FBSession openActiveSessionWithReadPermissions:@[@"public_profile"]
-                                           allowLoginUI:YES
-                                      completionHandler:
-         ^(FBSession *session, FBSessionState state, NSError *error) {
-             NSLog(@"openActiveSessionWithReadPermissions success");
-             // Retrieve the app delegate
-             AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
-             // Call the app delegate's sessionStateChanged:state:error method to handle session state changes
-             [appDelegate sessionStateChanged:session state:state error:error];
-             [rb shareFBContent];
-         }];
+        [controller loginToFB];
     }
 }
 
 - (void)shareFBContent {
     GameScene *gs = (GameScene *)self.scene;
+    __block GameViewController *controller = (GameViewController* )self.scene.view.window.rootViewController;
+    controller.loadingIcon.hidden = NO;
+    [controller.loadingIcon startAnimating];
+    controller.gameView.hidden = YES;
     
+    __block ReeTTDResultBoard *rb = self;
+    
+    __block NSString *alertTitle, *alertMessage;
+    /* *
+     * share an image to FB
+    FBPhotoParams *params = [[FBPhotoParams alloc] init];
+    
+    // Note that params.photos can be an array of images.  In this example
+    // we only use a single image, wrapped in an array.
+    params.photos = @[gs.playImage];
+    
+    [FBDialogs presentShareDialogWithPhotoParams:params
+                                     clientState:nil
+                                         handler:^(FBAppCall *call,
+                                                   NSDictionary *results,
+                                                   NSError *error) {
+                                             if (error) {
+                                                 NSLog(@"Error: %@",
+                                                       error.description);
+                                             } else {
+                                                 NSLog(@"Success!");
+                                             }
+                                             
+                                             controller.gameView.hidden = NO;
+                                             [controller.loadingIcon stopAnimating];
+                                             controller.loadingIcon.hidden = YES;
+                                         }];
+    */
     [FBRequestConnection startForUploadStagingResourceWithImage: gs.playImage completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if(!error) {
-            // Log the uri of the staged image
-            NSLog(@"Successfuly staged image with staged URI: %@", [result objectForKey:@"uri"]);
-            
             // Further code to post the OG story goes here
             NSString *imageUrl = (NSString *)[result objectForKey:@"uri"];
             
@@ -197,16 +219,24 @@ CGRect button4;
             ogObject.provisionedForPost = YES;
             
             // for og:title
-            ogObject[@"title"] = @"Roasted pumpkin seeds";
+            ogObject[@"title"] = @"Trap the Dot !";
             
             // for og:type, this corresponds to the Namespace you've set for your app and the object type name
-            ogObject[@"type"] = @"reeonce:step";
+            ogObject[@"type"] = @"reeonce:dot";
             
+            if (rb.resultIsWin) {
+                if (rb.steps > 1) {
+                    ogObject[@"description"] = [NSString stringWithFormat: @"I have trapped the dot in %d steps, can you take less?", rb.steps];
+                } else {
+                    ogObject[@"description"] = [NSString stringWithFormat: @"I have trapped the dot in %d step, can you take less?", rb.steps];
+                }
+            } else {
+                ogObject[@"description"] = [NSString stringWithFormat: @"The dot escaped. Can you help me? T_T "];
+            }
             // for og:description
-            ogObject[@"description"] = @"Crunchy pumpkin seeds roasted in butter and lightly salted.";
             
             // for og:url, we cover how this is used in the "Deep Linking" section below
-            ogObject[@"url"] = @"http://example.com/roasted_pumpkin_seeds";
+            ogObject[@"url"] = (NSString *)[ReeTTDConfiguration getValueWithKey:@"AppStoreURL"];
             
             // for og:image we assign the image that we just staged, using the uri we got as a response
             // the image has to be packed in a dictionary like this:
@@ -217,52 +247,88 @@ CGRect button4;
                     NSString *objectId = [result objectForKey:@"id"];
                     
                     id<FBOpenGraphAction> action = (id<FBOpenGraphAction>)[FBGraphObject graphObject];
-                    [action setObject:objectId forKey:@"step"];
+                    [action setObject:objectId forKey:@"dot"];
                     
                     // create action referencing user owned object
-                    [FBRequestConnection startForPostWithGraphPath:@"/me/reeonce:take" graphObject:action completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                    [FBRequestConnection startForPostWithGraphPath:@"/me/reeonce:trap" graphObject:action completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                         if(!error) {
                             FBOpenGraphActionParams *params = [[FBOpenGraphActionParams alloc] init];
                             params.action = action;
-                            params.actionType = @"reeonce:take";
+                            params.actionType = @"reeonce:trap";
                             
                             // If the Facebook app is installed and we can present the share dialog
                             if([FBDialogs canPresentShareDialogWithOpenGraphActionParams:params]) {
                                 // Show the share dialog
                                 [FBDialogs presentShareDialogWithOpenGraphAction:action
-                                                                      actionType:@"reeonce:take"
-                                                             previewPropertyName:@"step"
+                                                                      actionType:@"reeonce:trap"
+                                                             previewPropertyName:@"dot"
                                                                          handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
+                                                                             
+                                                                             controller.gameView.hidden = NO;
+                                                                             [controller.loadingIcon stopAnimating];
+                                                                             controller.loadingIcon.hidden = YES;
                                                                              if(error) {
-                                                                                 // There was an error
-                                                                                 NSLog([NSString stringWithFormat:@"Error publishing story: %@", error.description]);
+                                                                                 alertTitle = @"Share To Facebook Error";
+                                                                                 alertMessage = @"Error occored when publishing to Facebook.";
+                                                                                 [rb showShareErrorWithTitle:alertTitle Message:alertMessage];
+                                                                                 //NSLog([NSString stringWithFormat:@"Error publishing story: %@", error.description]);
+                                                                                 
                                                                              } else {
                                                                                  // Success
-                                                                                 NSLog(@"result %@", results);
+                                                                                 //NSLog(@"result %@", results);
                                                                              }
                                                                          }];
                                 
                                 // If the Facebook app is NOT installed and we can't present the share dialog
                             } else {
-                                // FALLBACK GOES HERE
+                                alertTitle = @"Share To Facebook Error";
+                                alertMessage = @"Please make sure you have Facebook app installed.";
+                                [rb showShareErrorWithTitle:alertTitle Message:alertMessage];
                             }
                         } else {
                             // An error occurred
-                            NSLog(@"Encountered an error posting to Open Graph: %@", error);
+                            //NSLog(@"Encountered an error posting to Open Graph: %@", error);
+                            
+                            alertTitle = @"Share To Facebook Error";
+                            alertMessage = @"Error occored when posting to Facebook.";
+                            [rb showShareErrorWithTitle:alertTitle Message:alertMessage];
                         }
                     }];
                     
                 } else {
                     // An error occurred
-                    NSLog(@"Error posting the Open Graph object to the Object API: %@", error);
+                    //NSLog(@"Error posting the Open Graph object to the Object API: %@", error);
+                    
+                    
+                    alertTitle = @"Share To Facebook Error";
+                    alertMessage = @"Error occored when posting to Facebook.";
+                    [rb showShareErrorWithTitle:alertTitle Message:alertMessage];
                 }
             }];
         } else {
             // An error occurred
-            NSLog(@"Error staging an image: %@", error);
+            //NSLog(@"Error staging an image: %@", error);
+            
+            alertTitle = @"Share To Facebook Error";
+            alertMessage = @"Error occored when uploading the game snapshot.";
+            [rb showShareErrorWithTitle:alertTitle Message:alertMessage];
+            
         }
     }];
 }
 
+-(void)showShareErrorWithTitle: (NSString *)alertTitle Message:(NSString *)alertMessage {
+    
+    GameViewController *controller = (GameViewController* )self.scene.view.window.rootViewController;
+    controller.gameView.hidden = NO;
+    [controller.loadingIcon stopAnimating];
+    controller.loadingIcon.hidden = YES;
+    
+    [[[UIAlertView alloc] initWithTitle: alertTitle
+                                message: alertMessage
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles:nil] show];
+}
 
 @end

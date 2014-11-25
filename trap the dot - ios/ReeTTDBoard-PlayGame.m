@@ -150,90 +150,125 @@
     }
 }
 
+- (int)getIndexNumberWithNode: (ReeTTDNode *)node {
+    return node.nodePos.x * self.y_length + node.nodePos.y;
+}
+
 -(void)sortCircleNets {
-    self.reachableCircles = [[NSMutableArray alloc] init];
-    NSMutableArray *circle = [[NSMutableArray alloc] init];
-    ReeTTDNode *previousNode = nil;
-    [circle addObject: self.reachableNets.firstObject];
-    for (int i = 0; i < self.reachableNets.count - 1; i ++) {
+    int isInCircle[100];
+    for (ReeTTDNode *net in self.reachableNets) {
+        isInCircle[[self getIndexNumberWithNode:net]] = 0;
+    }
+    
+    int i = 0;
+    isInCircle[[self getIndexNumberWithNode:self.reachableNets.firstObject]] = 1;
+    while (i < self.reachableNets.count) {
         ReeTTDNode *node = [self.reachableNets objectAtIndex:i];
+        //NSLog(@"circle at %d, %d, at index: %d", node.nodePos.x, node.nodePos.y, i);
         BOOL hasNext = NO;
         for (int d=0; d<6; d++) {
             ReeTTDDotPosition p = [node getPositionByDirection:d];
             if (p.x >= 0 && p.x < self.x_length && p.y >= 0 && p.y < self.y_length) {
                 ReeTTDNode *nearNode = [[self.gameBoard objectAtIndex:p.x] objectAtIndex: p.y];
+                //NSLog(@"near at %d, %d", p.x, p.y);
                 NSUInteger index = [self.reachableNets indexOfObject:nearNode];
-                if (index != NSNotFound && nearNode && index > i) {
+                int isInCircleForNearNode = isInCircle[[self getIndexNumberWithNode:nearNode]];
+                if (index != NSNotFound && nearNode && isInCircleForNearNode == 0) {
                     [self.reachableNets setObject:[self.reachableNets objectAtIndex:i + 1] atIndexedSubscript:index];
                     [self.reachableNets setObject:nearNode atIndexedSubscript: i + 1];
-                    [circle addObject:nearNode];
+                    i ++;
+                    isInCircle[[self getIndexNumberWithNode:nearNode]] = 1;
                     hasNext = YES;
-                } else if (index != NSNotFound && nearNode) {
-                    for (int dn=0; dn<6; dn++) {
-                        ReeTTDDotPosition pn = [nearNode getPositionByDirection:dn];
-                        if (pn.x >= 0 && pn.x < self.x_length && pn.y >= 0 && pn.y < self.y_length) {
-                            ReeTTDNode *nearNoden = [[self.gameBoard objectAtIndex:pn.x] objectAtIndex: pn.y];
-                            NSUInteger indexn = [self.reachableNets indexOfObject:nearNoden];
-                            if (indexn != NSNotFound && nearNoden && indexn > i + 1) {
-                                [self.reachableNets setObject:[self.reachableNets objectAtIndex:i + 1] atIndexedSubscript:index];
-                                [self.reachableNets setObject:nearNode atIndexedSubscript: i + 1];
-                                [circle setObject:nearNode atIndexedSubscript: circle.count - 1];
-                            }
-                        }
-                    }
+                    break;
                 } else if (index != NSNotFound && nearNode && index < i - 4) {
                     //那么圈很可能在这里
+                    int a0 = 0, a1 = 0, a2 = 0, a3 = 0;
+                    for (NSUInteger c = index; c <= i; c ++) {
+                        ReeTTDDotPosition pos = ((ReeTTDNode *)[self.reachableNets objectAtIndex:c]).nodePos;
+                        if (pos.x == self.dot_pos.x && pos.y < self.dot_pos.y) {
+                            a0 = 1;
+                        } else if (pos.x == self.dot_pos.x && pos.y > self.dot_pos.y) {
+                            a1 = 1;
+                        }  else if (pos.x < self.dot_pos.x && pos.y == self.dot_pos.y) {
+                            a2 = 1;
+                        }  else if (pos.x > self.dot_pos.x && pos.y == self.dot_pos.y) {
+                            a3 = 1;
+                        }
+                    }
+                    if (a0 + a1 + a2 + a3 == 4) {
+                        self.reachableCircle = [self.reachableNets subarrayWithRange: NSMakeRange(index, i + 1 - index)];
+                        return;
+                    }
                 }
             }
         }
         if (!hasNext) {
-            [self.reachableCircles addObject:circle];
-            circle = [[NSMutableArray alloc] init];
-            [circle addObject: [self.reachableNets objectAtIndex: i + 1]];
+            BOOL isDeathRoad = YES;
+            int top = i;
+            while (i > 0) {
+                i --;
+                node = [self.reachableNets objectAtIndex:i];
+                
+                //NSLog(@"back at %d, %d", node.nodePos.x, node.nodePos.y);
+                for (int dn=0; dn<6; dn++) {
+                    ReeTTDDotPosition pn = [node getPositionByDirection:dn];
+                    if (pn.x >= 0 && pn.x < self.x_length && pn.y >= 0 && pn.y < self.y_length) {
+                        ReeTTDNode *nearNoden = [[self.gameBoard objectAtIndex:pn.x] objectAtIndex: pn.y];
+                        NSUInteger indexn = [self.reachableNets indexOfObject:nearNoden];
+                        
+                        int isInCircleForNearNoden = isInCircle[[self getIndexNumberWithNode:nearNoden]];
+                        if (indexn != NSNotFound && nearNoden && isInCircleForNearNoden == 0) {
+                            [self.reachableNets setObject:[self.reachableNets objectAtIndex:i + 1] atIndexedSubscript:indexn];
+                            [self.reachableNets setObject:nearNoden atIndexedSubscript: i + 1];
+                            i ++;
+                            isInCircle[[self getIndexNumberWithNode:nearNoden]] = 1;
+                            isDeathRoad = NO;
+                            break;
+                        }
+                    }
+                }
+                if (!isDeathRoad) {
+                    break;
+                }
+            }
+            if (isDeathRoad) {
+                i = top + 1;
+            }
         }
-        previousNode = node;
     }
-    [self.reachableCircles addObject:circle];
 }
 
 -(void)gameWillEnd:(BOOL)isWin {
     if (isWin) {
         [self sortCircleNets];
-        for (NSMutableArray *circle in self.reachableCircles) {
-            SKShapeNode *line = [SKShapeNode node];
-            ReeTTDNode *node = [circle objectAtIndex:0];
-            CGMutablePathRef pathToDraw = CGPathCreateMutable();
-            CGPathMoveToPoint(pathToDraw, NULL, CGRectGetMidX(node.frame), CGRectGetMidY(node.frame));
-            for (int i = 1; i < circle.count; i ++) {
-                node = [circle objectAtIndex:i];
-                CGPathAddLineToPoint(pathToDraw, NULL, CGRectGetMidX(node.frame), CGRectGetMidY(node.frame));
-            }
-            for (int d=0; d<6; d++) {
-                ReeTTDDotPosition p = [circle.lastObject getPositionByDirection:d];
-                if (p.x >= 0 && p.x < self.x_length && p.y >= 0 && p.y < self.y_length) {
-                    ReeTTDNode *nearNode = [[self.gameBoard objectAtIndex:p.x] objectAtIndex: p.y];
-                    if (nearNode == circle.firstObject) {
-                        CGPathAddLineToPoint(pathToDraw, NULL, CGRectGetMidX(nearNode.frame), CGRectGetMidY(nearNode.frame));
-                        break;
-                    }
-                }
-            }
-            line.path = pathToDraw;
-            [line setStrokeColor:[UIColor orangeColor]];
-            [line setLineWidth:10];
-            line.zPosition = 8;
-            [self addChild:line];
-            
-            SKAction *followline = [SKAction followPath:pathToDraw asOffset:YES orientToPath:NO duration:2.0];
-            ReeTTDNode *anode = [[ReeTTDNode alloc] initWithImageNamed:@"dot-blue"];
-            anode.size = CGSizeMake(12, 12);
-            anode.zPosition = 9;
-            __block ReeTTDBoard *board = self;
-            [anode runAction:followline completion:^{
-                [board gameDidEnd:YES];
-            }];
-            [self addChild:anode];
+        NSArray *circle = self.reachableCircle;
+        SKShapeNode *line = [SKShapeNode node];
+        ReeTTDNode *node = [circle objectAtIndex:0];
+        ReeTTDNode *firstNode = node;
+        CGMutablePathRef pathToDraw = CGPathCreateMutable();
+        //NSLog(@"circle at %d, %d", node.nodePos.x, node.nodePos.y);
+        CGPathMoveToPoint(pathToDraw, NULL, CGRectGetMidX(node.frame), CGRectGetMidY(node.frame));
+        for (int i = 1; i < circle.count; i ++) {
+            node = [circle objectAtIndex:i];
+            CGPathAddLineToPoint(pathToDraw, NULL, CGRectGetMidX(node.frame), CGRectGetMidY(node.frame));
+            //NSLog(@"circle at %d, %d", node.nodePos.x, node.nodePos.y);
         }
+        CGPathAddLineToPoint(pathToDraw, NULL, CGRectGetMidX(firstNode.frame), CGRectGetMidY(firstNode.frame));
+        line.path = pathToDraw;
+        [line setStrokeColor:[UIColor orangeColor]];
+        [line setLineWidth:10];
+        line.zPosition = 8;
+        [self addChild:line];
+        
+        SKAction *followline = [SKAction followPath:pathToDraw asOffset:YES orientToPath:NO duration:2.0];
+        ReeTTDNode *anode = [[ReeTTDNode alloc] initWithImageNamed:@"dot-blue"];
+        anode.size = CGSizeMake(12, 12);
+        anode.zPosition = 9;
+        __block ReeTTDBoard *board = self;
+        [anode runAction:followline completion:^{
+            [board gameDidEnd:YES];
+        }];
+        [self addChild:anode];
     } else {
         [self gameDidEnd:NO];
     }

@@ -42,7 +42,7 @@
 @property (nonatomic) ReeTTDDotPosition dot_pos;
 
 @property (nonatomic) NSMutableArray *reachableNets;
-@property (nonatomic) NSMutableArray *reachableCircles;
+@property (nonatomic) NSArray *reachableCircle;
 
 @property (nonatomic) ReeTTDMode gameMode;
 
